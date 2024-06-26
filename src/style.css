@@ -5,34 +5,48 @@
   font-family: "Cutive Mono";
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 /* Navbar */
 nav {
-  width: 100vw;
+  width: 100%;
   height: 8vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  position: fixed;
+  position: absolute;
   z-index: 1;
   margin: 0 auto;
 }
 
 nav a {
-  /* font-family: "avantgarde"; */
   text-decoration: none;
   color: gray;
   padding: 10px 20px;
-  border-radius: 15px;
   font-size: 20px;
   font-weight: 600;
   margin: 0 40px;
   letter-spacing: -0.08em;
+  width: 176px;
+  transition: all 0.3s;
+  justify-content: center;
+  display: flex;
 }
 
 nav a:hover {
-  background-color: rgb(99, 213, 233);
-  border: 1px solid black;
-  transition: all 0.2s ease;
+  text-shadow: 0 0 4px gray;
+  color: snow;
+  letter-spacing: 0.02em;
+}
+
+/* for mobile icons -- ignore */
+#staff,
+#contact,
+#about,
+#schedule {
+  display: none;
 }
 
 /* Head Banner */
@@ -41,41 +55,62 @@ header figure {
   background-image: url("/images/main-banner-2.jpg");
   background-size: cover;
   height: 100vh;
-  width: 100vw;
+  width: 100%;
   position: relative;
 }
 
 header #headline {
   position: absolute;
-  top: 15%;
-  width: 100vw;
+  top: 13%;
+  width: 100%;
 }
 
 #headline h1 {
   font-family: "Courier New", Courier, monospace;
   font-weight: 100;
-  letter-spacing: 0.2em;
+  letter-spacing: 12px;
   font-size: 90px;
   color: white;
   text-align: center;
   max-width: 1200px;
   margin: 0 auto;
+  text-shadow: 0 0 4px gray;
 }
+
+.gradient {
+  background: linear-gradient(0.2turn, #d4a107, #2ceaf4);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Header buttons */
 
 header #buttons {
   position: absolute;
   display: flex;
   justify-content: center;
   bottom: 10%;
-  width: 100vw;
+  width: 100%;
   height: 60px;
   border-radius: 10px;
+  height: 10vh;
 }
 
 #buttons button {
-  padding: 20px 35px;
-  margin: 0 20px;
-  width: 150px;
+  margin: 0 30px;
+  width: 200px;
+  font-size: 24px;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+  background: transparent;
+  color: snow;
+  transition: all 0.3s;
+}
+
+#buttons button:hover {
+  background-color: white;
+  color: black;
+  cursor: pointer;
 }
 
 /* Stats section */
@@ -83,13 +118,98 @@ main #stats {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  width: 100vw;
+  width: 100%;
   height: 40vh;
   background-color: #ced4db;
+  box-shadow: inset 0 8px 24px gray;
 }
 
 #stats h1 {
+  background-color: #e8ecf0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 400px;
+  height: 300px;
+  padding: 0px 10px;
   text-align: center;
+  border: none;
   color: #3a414a;
+  border-radius: 14px;
+  font-family: "Roboto Slab";
 }
+
+#left-card {
+  box-shadow: inset 0 2px 2px #e770ff, 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+#middle-card {
+  box-shadow: inset 0 2px 2px #ffbf60, 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+#right-card {
+  box-shadow: inset 0 2px 2px #5cbeff, 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+
+
+/* --------------------- Responsive Design --------------------- */
+
+/* Tablet design  */
+@media screen and (max-width: 768px) {
+  nav {
+    transition: all 0.3s ease;
+  }
+
+  nav a {
+    margin: 0;
+  }
+
+  #headline h1 {
+    transition: all 0.4s ease;
+    font-size: 64px;
+  }
+}
+
+/* Mobile design */
+@media screen and (max-width: 480px) {
+  nav {
+    top: 3%;
+  }
+
+  nav .non-mobile-nav {
+    display: none;
+  }
+
+  #about,
+  #schedule,
+  #staff,
+  #contact {
+    display: block;
+    font-size: 6vw; /* 28px */
+    margin: 0 2vw; /* 18px */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+/* @media screen and (max-width: 400px) {
+    nav {
+    top: 3%;
+  }
+
+  nav .non-mobile-nav {
+    display: none;
+  }
+
+  #about,
+  #schedule,
+  #staff,
+  #contact {
+    display: block;
+    font-size: 24px;
+    margin: 0 10px;
+    width: 64px;
+  }
+} */

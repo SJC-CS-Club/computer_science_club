@@ -4,6 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Computer Science Club</title>
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="./src/style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -11,20 +15,27 @@
       href="https://fonts.googleapis.com/css2?family=Cutive+Mono&display=swap"
       rel="stylesheet"
     />
+    <link href="https://fonts.googleapis.com/css2?family=Cutive+Mono&family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
   </head>
 
   <body>
     <nav>
-      <a href="#">About Us</a>
-      <a href="#">Staff</a>
-      <a href="#">Schedule</a>
-      <a href="#">Contact Us</a>
+      <a href="#" class="non-mobile-nav">About Us</a>
+      <a href="#" class="non-mobile-nav">Staff</a>
+      <a href="#" class="non-mobile-nav">Schedule</a>
+      <a href="#" class="non-mobile-nav">Contact Us</a>
+
+      <!-- for mobile specifically -->
+      <a href="#" id="about"><i class="bx bx-question-mark"></i></a>
+      <a href="#" id="staff"><i class="bx bx-body"></i></a>
+      <a href="#" id="schedule"><i class="bx bxs-calendar"></i></a>
+      <a href="#" id="contact"><i class="bx bxs-contact"></i></a>
     </nav>
 
     <header>
       <figure alt="Techy desk stock photo"></figure>
       <div id="headline">
-        <h1>Computer Science Club</h1>
+        <h1>Computer Science <span class="gradient">Club</span></h1>
       </div>
       <div id="buttons">
         <button id="join-us">Join Us</button>
@@ -34,12 +45,12 @@
 
     <main>
       <section id="stats">
-        <h1>
+        <h1 id="left-card">
           10+ club member alumni achieved internships at esteemed tech
           companies.
         </h1>
-        <h1>Top rated club at San Jacinto College South</h1>
-        <h1>Led by industry experienced staff</h1>
+        <h1 id="middle-card">Top rated club at San Jacinto College South</h1>
+        <h1 id="right-card">Led by industry experienced staff</h1>
       </section>
     </main>
 
