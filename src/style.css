@@ -12,7 +12,7 @@ html {
 /* Navbar */
 nav {
   width: 100%;
-  height: 8vh;
+  height: 70px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -70,7 +70,7 @@ header #headline {
   font-weight: 100;
   letter-spacing: 12px;
   font-size: 90px;
-  color: white;
+  color: snow;
   text-align: center;
   max-width: 1200px;
   margin: 0 auto;
@@ -78,9 +78,10 @@ header #headline {
 }
 
 .gradient {
-  background: linear-gradient(0.2turn, #d4a107, #2ceaf4);
+  background: linear-gradient(45deg, #e770ff, #ffbf60, #5cbeff);
   background-clip: text;
   -webkit-text-fill-color: transparent;
+  text-shadow: none;
 }
 
 /* Header buttons */
@@ -91,9 +92,8 @@ header #buttons {
   justify-content: center;
   bottom: 10%;
   width: 100%;
-  height: 60px;
+  height: 90px;
   border-radius: 10px;
-  height: 10vh;
 }
 
 #buttons button {
@@ -101,16 +101,31 @@ header #buttons {
   width: 200px;
   font-size: 24px;
   border-radius: 10px;
-  transition: transform 0.3s ease;
-  background: transparent;
-  color: snow;
-  transition: all 0.3s;
 }
 
 #buttons button:hover {
-  background-color: white;
-  color: black;
   cursor: pointer;
+  border: 2px solid transparent;
+}
+
+#buttons #join-us {
+  background-color: snow;
+  color: black;
+}
+
+#buttons #join-us:hover {
+  background: linear-gradient(snow, snow) padding-box,
+  linear-gradient(45deg, #e770ff, #ffbf60, #5cbeff) border-box;
+}
+
+#buttons #learn-more {
+  background: black;
+  color: snow;
+}
+
+#buttons #learn-more:hover {
+  background: linear-gradient(black, black) padding-box,
+  linear-gradient(45deg, #e770ff, #ffbf60, #5cbeff) border-box;
 }
 
 /* Stats section */
@@ -119,7 +134,7 @@ main #stats {
   justify-content: space-around;
   align-items: center;
   width: 100%;
-  height: 40vh;
+  height: 400px;
   background-color: #ced4db;
   box-shadow: inset 0 8px 24px gray;
 }
@@ -155,6 +170,20 @@ main #stats {
 
 /* --------------------- Responsive Design --------------------- */
 
+/* Laptop design  */
+@media screen and (max-width: 1600px) {
+  /* #stats h1 {
+    transform: scale(0.8);
+  } */
+}
+
+/* Tablet Landscape design  */
+@media screen and (max-width: 1024px) {
+  #stats h1 {
+    transform: scale(0.8);
+  }
+}
+
 /* Tablet design  */
 @media screen and (max-width: 768px) {
   nav {
@@ -186,30 +215,10 @@ main #stats {
   #staff,
   #contact {
     display: block;
-    font-size: 6vw; /* 28px */
-    margin: 0 2vw; /* 18px */
+    font-size: 6vw;
+    margin: 0 2vw;
     display: flex;
     justify-content: center;
     align-items: center;
   }
 }
-
-/* @media screen and (max-width: 400px) {
-    nav {
-    top: 3%;
-  }
-
-  nav .non-mobile-nav {
-    display: none;
-  }
-
-  #about,
-  #schedule,
-  #staff,
-  #contact {
-    display: block;
-    font-size: 24px;
-    margin: 0 10px;
-    width: 64px;
-  }
-} */
