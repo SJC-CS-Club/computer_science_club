@@ -15,13 +15,17 @@
       href="https://fonts.googleapis.com/css2?family=Cutive+Mono&display=swap"
       rel="stylesheet"
     />
-    <link href="https://fonts.googleapis.com/css2?family=Cutive+Mono&family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cutive+Mono&family=Roboto+Slab:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <script src="./src/script.js" defer></script>
   </head>
 
   <body>
     <nav>
-      <a href="#" class="non-mobile-nav">About Us</a>
-      <a href="#" class="non-mobile-nav">Staff</a>
+      <a href="#stats" class="non-mobile-nav">About Us</a>
+      <a href="#pics" class="non-mobile-nav">Staff</a>
       <a href="#" class="non-mobile-nav">Schedule</a>
       <a href="#" class="non-mobile-nav">Contact Us</a>
 
@@ -52,6 +56,22 @@
         <h1 id="middle-card">Top rated club at San Jacinto College South</h1>
         <h1 id="right-card">Led by industry experienced staff</h1>
       </section>
+
+      <section id="pics" class="carousel">
+        <div class="carousel-inner">
+          <figure class="carousel-item" id="active" data-image="/images/carousel-image-one.jpg"></figure>
+          <figure class="carousel-item" data-image="/images/carousel-image-two.jpg"></figure>
+          <figure class="carousel-item" data-image="/images/carousel-image-three.jpg"></figure>
+        </div>
+        <button class="carousel-control left" id="left">
+          <i class="bx bxs-chevron-left"></i>
+        </button>
+        <button class="carousel-control right" id="right">
+          <i class="bx bxs-chevron-right"></i>
+        </button>
+      </section>
+
+      <section id="staff"></section>
     </main>
 
     <footer></footer>

@@ -115,7 +115,7 @@ header #buttons {
 
 #buttons #join-us:hover {
   background: linear-gradient(snow, snow) padding-box,
-  linear-gradient(45deg, #e770ff, #ffbf60, #5cbeff) border-box;
+    linear-gradient(45deg, #e770ff, #ffbf60, #5cbeff) border-box;
 }
 
 #buttons #learn-more {
@@ -125,7 +125,7 @@ header #buttons {
 
 #buttons #learn-more:hover {
   background: linear-gradient(black, black) padding-box,
-  linear-gradient(45deg, #e770ff, #ffbf60, #5cbeff) border-box;
+    linear-gradient(45deg, #e770ff, #ffbf60, #5cbeff) border-box;
 }
 
 /* Stats section */
@@ -166,7 +166,76 @@ main #stats {
   box-shadow: inset 0 2px 2px #5cbeff, 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
+/* Carousel section */
 
+.carousel {
+  height: 600px;
+  background-color: darkgray;
+  position: relative;
+  overflow: hidden;
+  z-index: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.carousel-inner {
+  display: flex;
+  width: 55%;
+  height: 85%;
+  position: relative;
+  z-index: 2;
+  transition: transform 0.5s ease;
+}
+
+#active {
+  opacity: 1;
+}
+
+.carousel-item {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-position: center;
+  background-size: cover;
+  border-radius: 14px;
+  box-shadow: 0 8px 10px gray;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+#left {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  z-index: 4;
+  left: 17%;
+}
+
+#left:hover {
+  cursor: pointer;
+}
+
+#left i {
+  font-size: 24px;
+}
+
+#right {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  z-index: 4;
+  right: 17%;
+;}
+#right:hover {
+  cursor: pointer;
+}
+
+#right i {
+  font-size: 24px;
+}
 
 /* --------------------- Responsive Design --------------------- */
 
