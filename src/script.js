@@ -1,38 +1,37 @@
-// event listener for the carousel
-document.addEventListener('DOMContentLoaded', (event) => {
-    // grabs the elements from .carousel-inner into an array
+// function for the carousel
+document.addEventListener('DOMContentLoaded', function() {
+    const leftButton = document.getElementById('left');
+    const rightButton = document.getElementById('right');
     const carouselItems = document.querySelectorAll('.carousel-item');
     let currentIndex = 0;
-
-    // Checks image url and displays the image accordingly
+  
+    // to change the images
     function updateCarousel() {
-        carouselItems.forEach((item, index) => {
-            if (index === currentIndex) {
-                item.id = 'active';
-                const imageUrl = item.getAttribute('data-image');
-                if (imageUrl) {
-                    item.style.backgroundImage = `url(${imageUrl})`;
-                }
-                item.style.opacity = '1'; 
-            } else {
-                item.id = '';
-                item.style.backgroundImage = '';
-                item.style.opacity = '0';
-            }
-        });
+      carouselItems.forEach((item, index) => {
+        item.classList.remove('active', 'prev', 'next');
+        if (index === currentIndex) {
+          item.classList.add('active');
+          item.style.backgroundImage = `url(${item.dataset.image})`;
+        } else if (index === (currentIndex === 0 ? carouselItems.length - 1 : currentIndex - 1)) {
+          item.classList.add('prev');
+        } else if (index === (currentIndex === carouselItems.length - 1 ? 0 : currentIndex + 1)) {
+          item.classList.add('next');
+        }
+      });
     }
-
-    // adds 1 to the current index to move the carousel forward
-    document.getElementById('right').addEventListener('click', () => {
-        currentIndex = (currentIndex + 1) % carouselItems.length;
-        updateCarousel();
+  
+    // When the user clicks to the left
+    leftButton.addEventListener('click', function() {
+      currentIndex = (currentIndex === 0) ? carouselItems.length - 1 : currentIndex - 1;
+      updateCarousel();
     });
-
-    // takes away 1 to the current index to move backward
-    document.getElementById('left').addEventListener('click', () => {
-        currentIndex = (currentIndex - 1 + carouselItems.length) % carouselItems.length;
-        updateCarousel();
+  
+    // When the user clicks to the right
+    rightButton.addEventListener('click', function() {
+      currentIndex = (currentIndex === carouselItems.length - 1) ? 0 : currentIndex + 1;
+      updateCarousel();
     });
-
-    updateCarousel(); 
-});
+  
+    updateCarousel();
+  });
+  

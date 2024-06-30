@@ -15,17 +15,19 @@
       href="https://fonts.googleapis.com/css2?family=Cutive+Mono&display=swap"
       rel="stylesheet"
     />
+    <link href="https://fonts.googleapis.com/css2?family=Playwrite+US+Modern:wght@100..400&display=swap" rel="stylesheet"/>
     <link
       href="https://fonts.googleapis.com/css2?family=Cutive+Mono&family=Roboto+Slab:wght@100..900&display=swap"
       rel="stylesheet"
     />
+    
     <script src="./src/script.js" defer></script>
   </head>
 
   <body>
     <nav>
       <a href="#stats" class="non-mobile-nav">About Us</a>
-      <a href="#pics" class="non-mobile-nav">Staff</a>
+      <a href="#staff-container" class="non-mobile-nav">Staff</a>
       <a href="#" class="non-mobile-nav">Schedule</a>
       <a href="#" class="non-mobile-nav">Contact Us</a>
 
@@ -59,7 +61,7 @@
 
       <section id="pics" class="carousel">
         <div class="carousel-inner">
-          <figure class="carousel-item" id="active" data-image="/images/carousel-image-one.jpg"></figure>
+          <figure class="carousel-item active" data-image="/images/carousel-image-one.jpg"></figure>
           <figure class="carousel-item" data-image="/images/carousel-image-two.jpg"></figure>
           <figure class="carousel-item" data-image="/images/carousel-image-three.jpg"></figure>
         </div>
@@ -71,8 +73,31 @@
         </button>
       </section>
 
-      <section id="staff"></section>
+      <section id="staff-container">
+        <figure class="tiled-bg" data-image="/images/example.png"></figure>
+        <div class="staff-image-container">
+          <figure id="vice-pres">
+            <h3>I'm_racist@stu.sanjac.edu</h3>
+            <h2>VICE PRESIDENT</h2>
+          </figure>
+          <figure id="pres">
+            <h3>yo_mama@stu.sanjac.edu</h3>
+            <h2>PRESIDENT</h2>
+          </figure>
+          <figure id="sponsor">
+            <h3>deez_nuts@stu.sanjac.edu</h3>
+            <h2>SPONSOR</h2>
+          </figure>
+        </div>
+        <hr />
+        <div class="officer-section">
+          <h1 id="staff-officer-title">Officers</h1>
+          <h3 id="staff-officer-names">Nate · President | Derrick · boo boo Coder | Emmanuel · Black man</h3>
+        </div>
+      </section>
     </main>
+
+
 
     <footer></footer>
   </body>

@@ -5,6 +5,8 @@
   font-family: "Cutive Mono";
 }
 
+/* FONTS */
+
 html {
   scroll-behavior: smooth;
 }
@@ -177,40 +179,52 @@ main #stats {
   display: flex;
   justify-content: center;
   align-items: center;
+  background-image: url('/images/background-image-two.jpg');
+  background-position: center;
+  background-size: cover;
 }
 
 .carousel-inner {
-  display: flex;
   width: 55%;
   height: 85%;
   position: relative;
   z-index: 2;
-  transition: transform 0.5s ease;
-}
-
-#active {
-  opacity: 1;
+  display: flex;
+  border-radius: 10px;
 }
 
 .carousel-item {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
   background-position: center;
   background-size: cover;
-  border-radius: 14px;
-  box-shadow: 0 8px 10px gray;
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  transition: transform 0.5s ease, opacity 0.5s ease;
   opacity: 0;
-  transition: opacity 0.3s ease;
+  z-index: 1;
+  border-radius: 10px;
+}
+
+.carousel-item.active {
+  opacity: 1;
+  z-index: 2;
+  transform: translateX(0);
+}
+
+.carousel-item.next {
+  transform: translateX(100%);
+}
+
+.carousel-item.prev {
+  transform: translateX(-100%);
 }
 
 #left {
   position: absolute;
   width: 50px;
   height: 50px;
-  z-index: 4;
+  z-index: 3;
   left: 17%;
 }
 
@@ -226,15 +240,118 @@ main #stats {
   position: absolute;
   width: 50px;
   height: 50px;
-  z-index: 4;
+  z-index: 3;
   right: 17%;
-;}
+}
+
 #right:hover {
   cursor: pointer;
 }
 
 #right i {
   font-size: 24px;
+}
+
+/* staff section */
+
+#staff-container {
+  height: 85vh;
+  width: 100%;
+  background-size: 100px;
+  /* background-image: url('/images/example.png'); */
+}
+
+hr {
+  width: 60vw;
+  margin: 0 auto;
+}
+
+.tiled-bg {
+  background-image: url('/images/example.png');
+  transform: rotate(30deg);
+}
+
+.staff-image-container {
+  width: 100%;
+  height: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.staff-image-container figure {
+  width: 18vw;
+  height: 50vh;
+  border: 1px solid black;
+  border-radius: 5px;
+  margin: 0 60px;
+}
+
+#pres {
+  background-image: url("/images/staff-image-one.jpg");
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  box-shadow: -4px 8px 8px gray;
+}
+
+.staff-image-container h3 {
+  width: 100%;
+  position: absolute;
+  bottom: -40px;
+  text-align: center;
+  letter-spacing: 0.5px;
+}
+
+.staff-image-container h2 {
+  width: 100%;
+  position: absolute;
+  top: -45px;
+  text-align: center;
+  font-family: "Playwrite US Modern";
+  letter-spacing: 1px;
+  font-weight: 400;
+}
+
+#vice-pres,
+#sponsor {
+  transform: scale(0.9);
+}
+
+#vice-pres {
+  background-image: url("/images/staff-image-two.jpg");
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  box-shadow: 0 8px 8px gray;
+}
+
+#sponsor {
+  background-image: url("/images/staff-image-three.jpg");
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  box-shadow: 0 8px 8px gray;
+}
+
+.officer-section {
+  height: 15vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+}
+
+
+#staff-officer-title {
+  text-align: center;
+  font-size: 28px;
+  margin-top: 15px;
+}
+
+#staff-officer-names {
+  text-align: center;
+  margin-bottom: 40px;
 }
 
 /* --------------------- Responsive Design --------------------- */
