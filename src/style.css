@@ -342,6 +342,10 @@ hr {
   flex-direction: column;
 }
 
+/* For mobile use */
+.officer-mobile {
+  display: none;
+}
 
 #staff-officer-title {
   text-align: center;
@@ -353,6 +357,7 @@ hr {
   text-align: center;
   margin-bottom: 40px;
 }
+
 
 /* --------------------- Responsive Design --------------------- */
 
@@ -367,6 +372,12 @@ hr {
 @media screen and (max-width: 1024px) {
   #stats h1 {
     transform: scale(0.8);
+  }
+
+  .staff-image-container figure {
+    width: 40vw;
+    height: 40vh;
+    margin: 10px;
   }
 }
 
@@ -384,6 +395,20 @@ hr {
     transition: all 0.4s ease;
     font-size: 64px;
   }
+
+  /* staff section */
+  .staff-image-container figure {
+    width: 40vw;
+    height: 40vh;
+    margin: 10px;
+  }
+
+  .staff-image-container h3,
+  .staff-image-container h2 {
+    font-size: 16px;
+  }
+
+  
 }
 
 /* Mobile design */
@@ -406,5 +431,62 @@ hr {
     display: flex;
     justify-content: center;
     align-items: center;
+  }
+
+  /* staff section */
+  .staff-image-container {
+    flex-direction: column;
+    height: auto;
+    gap: 70px;
+    position: relative;
+  }
+
+  .staff-image-container figure {
+    width: 80vw;
+    height: 30vh;
+    margin: 10px 0;
+  }
+
+  .staff-image-container h3,
+  .staff-image-container h2 {
+    font-size: 14px;
+  }
+
+  #staff-officer-title {
+    font-size: 20px;
+  }
+
+  #staff-officer-names {
+    font-size: 12px;
+  }
+
+  .staff-image-container h3 {
+    font-size: 20px;
+  }
+  
+  hr {
+    display: none;
+  }
+
+  .officer-section {
+    height: auto;
+    gap: 20px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 30px;
+  }
+
+  #staff-officer-title {
+    font-size: 38px;
+  }
+
+  #staff-officer-names {
+    display: none;
+  }
+
+  .officer-mobile {
+    display: block;
+    font-size: 20px;
   }
 }
