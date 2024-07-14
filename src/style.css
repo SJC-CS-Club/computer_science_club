@@ -359,6 +359,31 @@ hr {
 }
 
 
+/* Fall Schedule Section */
+#fall-schedule {
+  height: 70vh;
+  width: 100%;
+  border: 1px solid red;
+  display: flex;
+}
+
+.fall-schedule-left {
+  width: 40%;
+  border: 1px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.fall-schedule-left h1, .fall-schedule-left p {
+  border: 1px solid red;
+}
+
+
+
+
 /* --------------------- Responsive Design --------------------- */
 
 /* Laptop design  */
