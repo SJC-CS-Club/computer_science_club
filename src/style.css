@@ -11,6 +11,25 @@ html {
   scroll-behavior: smooth;
 }
 
+/* Scrollbar Styles */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  -webkit-border-radius: 2px;
+  border-radius: 2px;
+  background: #FFFFFF;
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5);
+}
+
+
 /* Navbar */
 nav {
   width: 100%;
@@ -361,28 +380,159 @@ hr {
 
 /* Fall Schedule Section */
 #fall-schedule {
-  height: 70vh;
+  height: 60vh;
   width: 100%;
-  border: 1px solid red;
   display: flex;
+  background-color: lightgray;
 }
 
 .fall-schedule-left {
-  width: 40%;
-  border: 1px solid black;
   display: flex;
   justify-content: center;
-  align-items: flex-start;
+  align-items: center;
   flex-direction: column;
-  gap: 10px;
+  gap: 20px;
+  padding-left: 60px;
+  width: 70%;
 }
 
-.fall-schedule-left h1, .fall-schedule-left p {
-  border: 1px solid red;
+.fall-schedule-left h1 {
+  font-size: 48px;
+  width: 100%;
+}
+
+.fall-schedule-left p {
+  font-size: 24px;
+  width: 100%;
+}
+
+.fall-schedule-right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  gap: 40px;
+}
+
+#fall-agenda {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 10%;
+  font-size: 32px;
+  font-weight: bold;
+  border-bottom: 1px solid black;
+}
+
+.fall-schedule-right-inner {
+  width: 70%;
+}
+
+#fs-scroll-wheel {
+  display: flex;
+  overflow: scroll;
+  overflow-x: hidden;
+  flex-direction: column;
+  width: 70%;
+  height: 300px;
+}
+
+#fs-scroll-wheel button {
+  height: 100px;
+  width: 100%;
+  font-size: 24px;
+  display: block;
+  flex-shrink: 0;
+}
+
+
+/* Footer Section */
+footer {
+  height: 40vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-container {
+  width: 100%;
+  height: 90%;
+  display: flex;
+}
+
+.footer-section {
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  font-size: 18px;
+}
+
+.footer-section div, .footer-section h3 {
+  width: 80%;
+  text-align: center;
+} 
+
+#footer-ending {
+  text-align: center;
+}
+
+#footer-card-two a {
+  text-decoration: none;
+}
+
+#footer-card-two a:hover {
+  text-shadow: 0 0 4px gray;
+  letter-spacing: 0.02em; 
+  transition: all 0.1s ease;
 }
 
 
 
+#footer-card-three p, #footer-card-three form {
+  width: 80%;
+}
+#footer-card-three form {
+  display: flex;
+  justify-content: space-between;
+}
+
+#footer-card-three p {
+  text-align: center;
+}
+
+#footer-card-three input {
+  width: 60%;
+  height: 30px;
+  padding: 10px;
+}
+
+#footer-card-three button {
+  width: 40%;
+  height: 30px;
+  overflow: hidden;
+}
+
+.contact-socials {
+  display: flex;
+  height: 20%;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.contact-socials a {
+  font-size: 26px;
+  color: black;
+}
+
+.contact-socials a:hover {
+  text-shadow: 0 0 4px gray;
+  letter-spacing: 0.02em; 
+  transition: all 0.1s ease;
+  transform: scale(1.05);
+}
 
 /* --------------------- Responsive Design --------------------- */
 
@@ -432,6 +582,35 @@ hr {
   .staff-image-container h2 {
     font-size: 16px;
   }
+
+  /* Fall-Schedule section */
+  #fall-schedule {
+    flex-direction: column;
+    height: 80vh;
+  }
+
+  .fall-schedule-left {
+    height: 35%;
+    width: 100%;
+    padding-left: 0px;
+  }
+
+  .fall-schedule-left h1, .fall-schedule-left p {
+    text-align: center;
+    padding-right: 45px;
+  } 
+
+  .fall-schedule-right {
+    height: 65%;
+  }
+
+  #fall-agenda {
+    width: 80%;
+  }
+
+  #fs-scroll-wheel {
+    width: 80%;
+  }  
 
   
 }
