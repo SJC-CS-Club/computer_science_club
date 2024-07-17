@@ -1,3 +1,4 @@
+/* Universal Styles */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -5,10 +6,9 @@
   font-family: "Cutive Mono";
 }
 
-/* FONTS */
-
 html {
   scroll-behavior: smooth;
+  font-size: 16px;
 }
 
 /* Scrollbar Styles */
@@ -155,7 +155,7 @@ main #stats {
   justify-content: space-around;
   align-items: center;
   width: 100%;
-  height: 400px;
+  height: 50vh;
   background-color: #ced4db;
   box-shadow: inset 0 8px 24px gray;
 }
@@ -165,7 +165,7 @@ main #stats {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 400px;
+  width: 25%;
   height: 300px;
   padding: 0px 10px;
   text-align: center;
@@ -276,7 +276,6 @@ main #stats {
 #staff-container {
   height: 85vh;
   width: 100%;
-  background-size: 100px;
 }
 
 hr {
@@ -323,6 +322,7 @@ hr {
   text-decoration: none;
   font-size: 20px;
   font-weight: bold;
+  color: black;
 }
 
 .staff-image-container a:hover {
@@ -479,6 +479,68 @@ hr {
 }
 
 
+/* Feedback Section */
+#feedback-section {
+  height: 40vh;
+  display: flex;
+  background-color: #8c919a;
+}
+
+.feedback-left {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.feedback-left h1, .feedback-left p {
+  margin-left: 10%;
+}
+
+.feedback-left h1 {
+  font-size: 40px;
+}
+
+.feedback-left p {
+  font-size: 18px;
+  width: 50%;
+}
+
+.feedback-right {
+  width: 50%;
+}
+
+.feedback-right form {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#feedback {
+  height: 80%;
+  width: 50%;
+  margin-top: 20px;
+  padding: 5px;
+  border: 1px solid black;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.feedback-right form input[type="submit"] {
+  margin-bottom: 20px;
+  width: 200px;
+  height: 50px;
+  border-radius: 5px;
+  border: none;
+  font-weight: bold;
+}
+
+
+
 /* Footer Section */
 footer {
   height: 40vh;
@@ -576,21 +638,10 @@ footer {
   } */
 }
 
-/* Tablet Landscape design  */
-@media screen and (max-width: 1024px) {
-  #stats h1 {
-    transform: scale(0.8);
-  }
-
-  .staff-image-container figure {
-    width: 40vw;
-    height: 40vh;
-    margin: 10px;
-  }
-}
 
 /* Tablet design  */
 @media screen and (max-width: 768px) {
+  /* Nav bar */
   nav {
     transition: all 0.3s ease;
   }
@@ -604,16 +655,35 @@ footer {
     font-size: 64px;
   }
 
+  /* Stats section */
+  #stats h1 {
+    width: 30%;
+  }  
+
+
   /* staff section */
-  .staff-image-container figure {
-    width: 40vw;
-    height: 40vh;
-    margin: 10px;
+  #staff-container {
+    height: 160vh;
+  }
+  
+  .staff-image-container {
+    flex-direction: column;
+    height: 85%;
   }
 
-  .staff-image-container h3,
+  .staff-image-container figure {
+    width: 60vw;
+    height: 40vh;
+    margin: 40px auto;
+  }
+
   .staff-image-container h2 {
-    font-size: 16px;
+    font-size: 20px;
+  }
+
+  .officer-section {
+    height: 15%;
+    padding: 20px;
   }
 
   /* Fall-Schedule section */
@@ -625,7 +695,7 @@ footer {
   .fall-schedule-left {
     height: 35%;
     width: 100%;
-    padding-left: 0px;
+    padding-left: 20px;
   }
 
   .fall-schedule-left h1, .fall-schedule-left p {
@@ -651,12 +721,47 @@ footer {
     height: 70vh;
   }
 
+  .map-container {
+    width: 100%;
+    height: 70%;
+    padding: 20px;
+  }
+
+  #location h1 {
+    height: 30%;
+    width: 100%;
+  }
+
   /* Footer */
   #footer {
-    height: 70vh;
+    height: 90vh;
+  }
+
+  .footer-container {
+    flex-direction: column;
+    height: 95%;
+  }
+
+  .footer-section {
+    height: 25%;
+    width: 100%;
+    border-bottom: 1px solid black;
+  }
+
+  .footer-section h3 {
+    font-size: 26px;
+  }
+
+  #footer-card-one div {
+    font-size: 20px;
+  } 
+  
+  #footer-card-four a {
+    font-size: 34px;
   }
   
 }
+
 
 /* Mobile design */
 @media screen and (max-width: 480px) {

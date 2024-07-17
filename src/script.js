@@ -35,3 +35,18 @@ document.addEventListener('DOMContentLoaded', function() {
     updateCarousel();
   });
   
+
+
+
+// Save scroll position
+window.addEventListener('beforeunload', () => {
+  localStorage.setItem('scrollPosition', window.scrollY);
+});
+
+// Restore scroll position
+window.addEventListener('load', () => {
+  const scrollPosition = localStorage.getItem('scrollPosition');
+  if (scrollPosition) {
+      window.scrollTo(0, scrollPosition);
+  }
+});
