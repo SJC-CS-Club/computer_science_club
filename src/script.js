@@ -33,20 +33,25 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   
     updateCarousel();
-  });
+});
   
-
 
 
 // Save scroll position
 window.addEventListener('beforeunload', () => {
-  localStorage.setItem('scrollPosition', window.scrollY);
+  const scrollY = window.scrollY;
+  console.log(`Saving scroll position: ${scrollY}`);
+  localStorage.setItem('scrollPosition', scrollY);
 });
 
-// Restore scroll position
+// Restore scroll position and log the value
 window.addEventListener('load', () => {
-  const scrollPosition = localStorage.getItem('scrollPosition');
-  if (scrollPosition) {
-      window.scrollTo(0, scrollPosition);
-  }
+  setTimeout(() => {
+      const scrollPosition = localStorage.getItem('scrollPosition');
+      console.log(`Scroll Position from Local Storage: ${scrollPosition}`);
+      if (scrollPosition) {
+          window.scrollTo(0, parseInt(scrollPosition, 10));
+          console.log(`Restored scroll position to: ${scrollPosition}`);
+      }
+  }, 0); // Delay added to ensure DOM is fully rendered
 });

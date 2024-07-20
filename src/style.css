@@ -732,6 +732,16 @@ footer {
     width: 100%;
   }
 
+  /* Feedback */
+  .feedback-left {
+    border: 1px solid red;
+  }
+
+  .feedback-right {
+    border: 3px solid black;
+  }
+  
+
   /* Footer */
   #footer {
     height: 90vh;
