@@ -639,6 +639,31 @@ footer {
 }
 
 
+
+/* Laptop design */
+@media screen and (max-width: 1024px) {
+  /* staff section */
+  #staff-container  {
+    border: 1px solid red;
+  }
+
+  .staff-image-container {
+    border: 1px solid blue;
+  }
+
+  .staff-image-container figure {
+    border: 1px solid red;
+  }
+
+  .staff-image-container a {
+    height: 20%;
+  }
+
+
+}
+
+
+
 /* Tablet design  */
 @media screen and (max-width: 768px) {
   /* Nav bar */
