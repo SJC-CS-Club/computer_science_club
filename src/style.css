@@ -642,26 +642,20 @@ footer {
 
 /* Laptop design */
 @media screen and (max-width: 1024px) {
-  /* staff section */
-  #staff-container  {
-    border: 1px solid red;
+  
+  /* Carousel section */
+  .carousel-inner {
+    width: 75%;
   }
-
-  .staff-image-container {
-    border: 1px solid blue;
+  
+  #left {
+    left: 5%;
   }
-
-  .staff-image-container figure {
-    border: 1px solid red;
+  
+  #right {
+    right: 5%;
   }
-
-  .staff-image-container a {
-    height: 20%;
-  }
-
-
 }
-
 
 
 /* Tablet design  */
@@ -675,15 +669,51 @@ footer {
     margin: 0;
   }
 
+  header #headline {
+    top: 10%;
+  }
+
   #headline h1 {
     transition: all 0.4s ease;
-    font-size: 64px;
+    font-size: 74px;
+    width: 80%;
   }
 
   /* Stats section */
   #stats h1 {
     width: 30%;
+    font-size: 20px;
   }  
+
+
+  /* Carousel section */
+  .carousel {
+    height: 450px;
+  }
+  
+  .carousel-inner {
+    height: 75%;
+    width: 80%;
+  }
+  
+  .carousel-item {
+    background-size: cover;
+  }
+
+  #left {
+    left: 40%;
+    bottom: 2%;
+    width: 40px;
+    height: 40px;
+  }
+
+  #right {
+    bottom: 2%;
+    right: 40%;
+    width: 40px;
+    height: 40px;
+  }
+
 
 
   /* staff section */
@@ -757,19 +787,9 @@ footer {
     width: 100%;
   }
 
-  /* Feedback */
-  .feedback-left {
-    border: 1px solid red;
-  }
-
-  .feedback-right {
-    border: 3px solid black;
-  }
-  
-
   /* Footer */
   #footer {
-    height: 90vh;
+    height: 110vh;
   }
 
   .footer-container {
@@ -819,6 +839,42 @@ footer {
     justify-content: center;
     align-items: center;
   }
+
+  header #headline {
+    top: 12%;
+  }
+
+  #headline h1 {
+    font-size: 50px;
+  }
+
+
+  /* Stats section */
+
+  main #stats {
+    flex-direction: column;
+    height: 80vh;
+  }
+
+  #stats h1  {
+    width: 70%;
+    height: 170px;
+    font-size: 20px;
+  }
+
+  /* Carousel section */
+  .carousel-item {
+    background-size: contain;
+  }
+  
+  #right {
+    right: 30%;
+  }
+
+  #left {
+    left: 30%;
+  }
+
 
   /* staff section */
   .staff-image-container {
@@ -875,5 +931,56 @@ footer {
   .officer-mobile {
     display: block;
     font-size: 20px;
+  }
+
+  /* Fall Schedule */
+
+  #fall-schedule {
+    height: 100vh;
+  }
+
+  /* Feedback section */
+  #feedback-section {
+    flex-direction: column;
+    height: 70vh;
+  }
+
+  .feedback-left {
+    width: 100%;
+    height: 50%;
+    align-items: flex-start;
+    justify-content: center;
+  }
+
+  .feedback-left h1 {
+    font-size: 44px;
+  }
+
+  .feedback-left p {
+    font-size: 24px;
+    width: 80%;
+  }
+
+  .feedback-right {
+    width: 100%;
+    height: 50%;
+  }
+
+  #feedback {
+    width: 80%;
+  }
+
+  .feedback-right form input[type="submit"] {
+    width: 50%;
+    font-size: 18px;
+  }
+
+  /* Footer */
+  #footer {
+    height: 150vh;
+  }
+
+  #footer-ending {
+    margin-top: 20px;
   }
 }
