@@ -21,6 +21,7 @@
       rel="stylesheet"
     />
     <script src="./src/script.js" defer></script>
+    <script src="./src/button.js" defer></script>
   </head>
 
   <body>
@@ -42,7 +43,7 @@
     <header>
       <figure alt="Techy desk stock photo"></figure>
       <div id="headline">
-        <h1>Computer Science <span class="gradient">Club</span></h1>
+        <h1>Computer Science<span class="gradient">Club</span></h1>
       </div>
       <div id="buttons">
         <button id="join-us">Join Us</button>
@@ -81,7 +82,7 @@
       <section id="staff-container">
         <div class="staff-image-container">
           <figure id="vice-pres">
-            <a href="mailto:example@stu.sanjac.edu">TBA@stu.sanjac.edu</a>
+            <a href="#">TBA</a>
             <h2>VICE PRESIDENT</h2>
           </figure>
           <figure id="pres">
@@ -89,7 +90,7 @@
             <h2>PRESIDENT</h2>
           </figure>
           <figure id="sponsor">
-            <a href="mailto:example@stu.sanjac.edu">TBA@stu.sanjac.edu</a>
+            <a href="#">TBA</a>
             <h2>SPONSOR</h2>
           </figure>
         </div>
@@ -117,25 +118,34 @@
         <aside class="fall-schedule-right">
           <div class="fall-schedule-right-inner" id="fall-agenda">Weekly Agenda</div>
           <div id="fs-scroll-wheel" class="fall-schedule-right-inner">
-            <button>Week 1 | Intro to the Club | (08/27/24)</button>
-            <button>Week 2 | Intro to Problem-Solving and Critial Thinking | (09/03/24)</button>
-            <button>Week 3 | Intro to different Computer Science Fields | (09/10/24)</button>
-            <button>Week 4 | Intro to Git and GitHub | (09/17/24)</button>
-            <button>Week 5 | Intro to Cybersecurity | (09/24/24)</button>
-            <button>Week 6 | Python Basics | (10/01/24)</button>
-            <button>Week 7 | Intermediate Python Programming | (10/08/24)</button>
-            <button>Week 8 | Intro to Software Engineering & Best Practices | (10/15/24)</button>
-            <button>Week 9 | Intro to Game Development | (10/22/24)</button>
-            <button>Week 10 | Intro to Web Development | (10/29/24)</button>
-            <button>Week 11 | Intermediate Web Development | (11/05/24)</button>
-            <button>Week 12 | Building a Personal Porfolio (Part 1) | (11/12/24)
+            <button class="fall-info-buttons">Week 1 | Intro to the Club | (08/27/24)</button>
+            <button class="fall-info-buttons">Week 2 | Intro to Problem-Solving and Critial Thinking | (09/03/24)</button>
+            <button class="fall-info-buttons">Week 3 | Intro to different Computer Science Fields | (09/10/24)</button>
+            <button class="fall-info-buttons">Week 4 | Intro to Git and GitHub | (09/17/24)</button>
+            <button class="fall-info-buttons">Week 5 | Intro to Cybersecurity | (09/24/24)</button>
+            <button class="fall-info-buttons">Week 6 | Python Basics | (10/01/24)</button>
+            <button class="fall-info-buttons">Week 7 | Intermediate Python Programming | (10/08/24)</button>
+            <button class="fall-info-buttons">Week 8 | Intro to Software Engineering & Best Practices | (10/15/24)</button>
+            <button class="fall-info-buttons">Week 9 | Intro to Game Development | (10/22/24)</button>
+            <button class="fall-info-buttons">Week 10 | Intro to Web Development | (10/29/24)</button>
+            <button class="fall-info-buttons">Week 11 | Intermediate Web Development | (11/05/24)</button>
+            <button class="fall-info-buttons">Week 12 | Building a Personal Porfolio (Part 1) | (11/12/24)
             </button>
-            <button>Week 13 | Building a Personal Porfolio (Part 2) | (11/19/24)</button>
-            <button>Week 14 | Build a final Project / Coding Competition | (11/26/24)</button>
-            <button>Week 15 | Final Presentations & End-of-Year Party | (12/03/24)</button>
+            <button class="fall-info-buttons">Week 13 | Building a Personal Porfolio (Part 2) | (11/19/24)</button>
+            <button class="fall-info-buttons">Week 14 | Build a final Project / Coding Competition | (11/26/24)</button>
+            <button class="fall-info-buttons">Week 15 | Final Presentations & End-of-Year Party | (12/03/24)</button>
           </div>
         </aside>
       </section>
+
+      <!-- Popup content for the Fall-schedule -->
+      <div id="popup" class="popup">
+        <div class="popup-content">
+            <span class="close-button">&times;</span>
+            <p id="popup-message">This is a placeholder message.</p>
+        </div>
+      </div>
+    
 
       <!-- Location Section -->
       <section id="location">
@@ -155,7 +165,9 @@
      <section id="feedback-section">
         <div class="feedback-left">
           <h1>Feedback</h1>
-          <p>We'd love to hear about how we can improve our club experience for the students!</p>
+          <p>We'd love to hear about how we can improve our club experience for the students!
+            <span class="feedback-span">(This section is currently under construction and won't work as intended. To give feedback, contact the president: <a href="mailto:Paz.n089158@stu.sanjac.edu">Paz.n089158@stu.sanjac.edu</a>)</span>
+          </p>
         </div>
         <div class="feedback-right">
           <form action="mailto:Paz.n089158@stu.sanjac.edu" method="post" enctype="text/plain">
@@ -173,7 +185,7 @@
         <div class="footer-section" id="footer-card-one">
           <h3>Meeting Times & Directions</h3>
           <div>Tuesday's | 4:00 - 6:00 pm</div>
-          <div>Building 8 (Engineering Building) Room 278</div>
+          <div>Building 8 (Engineering Building) Room 207</div>
           <div>Duration: 8/27/24 - 12/3/24</div>
         </div>
         <div class="footer-section" id="footer-card-two">
@@ -185,7 +197,7 @@
         </div>
         <div class="footer-section" id="footer-card-three">
           <h3>Newsletter</h3>
-          <p>Sign up for our newsletter to stay updated on the latest news and events.</p>
+          <p>Sign up for our newsletter to stay updated on the latest news and events. <span>This section is under construction and won't work as intended.Check back soon!</span></p>
           <form>
             <input type="email" placeholder="Your email address" name="email" autocomplete="email" required>
             <button type="submit">Subscribe</button>

@@ -302,7 +302,7 @@ hr {
 }
 
 #pres {
-  background-image: url("/images/staff-image-four.jpg");
+  background-image: url("/images/staff-image-three.jpg");
   background-position: center;
   background-size: cover;
   position: relative;
@@ -344,7 +344,7 @@ hr {
 }
 
 #vice-pres {
-  background-image: url("/images/staff-image-two.jpg");
+  background-image: url("/images/staff-image-three.jpg");
   background-position: center;
   background-size: cover;
   position: relative;
@@ -365,6 +365,7 @@ hr {
   justify-content: space-around;
   align-items: center;
   flex-direction: column;
+  gap: 15px;
 }
 
 /* For mobile use */
@@ -453,6 +454,40 @@ hr {
 }
 
 
+/* Popup Section for the button */
+.popup {
+  display: none;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.5);
+  z-index: 1000;
+}
+
+.popup-content {
+  position: relative;
+  margin: 15% auto;
+  padding: 20px;
+  width: 80%;
+  max-width: 600px;
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 30px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+
+
 /* Location Section */
 #location {
   height: 50vh;
@@ -536,6 +571,10 @@ hr {
   font-weight: bold;
 }
 
+span  {
+  color: rgb(183, 11, 11);
+}
+
 
 
 /* Footer Section */
@@ -615,7 +654,7 @@ footer {
 }
 
 .contact-socials a {
-  font-size: 26px;
+  font-size: 2.5vw;
   color: black;
 }
 
@@ -847,7 +886,7 @@ footer {
 
   main #stats {
     flex-direction: column;
-    height: 80vh;
+    height: 110vh;
   }
 
   #stats h1  {
@@ -872,7 +911,6 @@ footer {
 
   /* staff section */
   #staff-container {
-    border: 1px solid blue;
     height: 280vh;
   }
 
@@ -968,7 +1006,7 @@ footer {
   /* Feedback section */
   #feedback-section {
     flex-direction: column;
-    height: 70vh;
+    height: 100vh;
   }
 
   .feedback-left {
@@ -979,11 +1017,11 @@ footer {
   }
 
   .feedback-left h1 {
-    font-size: 44px;
+    font-size: 10vw;
   }
 
   .feedback-left p {
-    font-size: 24px;
+    font-size: 4.5vw;
     width: 80%;
   }
 
