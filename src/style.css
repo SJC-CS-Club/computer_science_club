@@ -63,10 +63,7 @@ nav a:hover {
 }
 
 /* for mobile icons -- ignore */
-#staff,
-#contact,
-#about,
-#schedule {
+:is(#staff, #contact, #schedule, #about) {
   display: none;
 }
 
@@ -821,19 +818,16 @@ footer {
 /* Mobile design */
 @media screen and (max-width: 480px) {
   nav {
-    top: 3%;
+    top: 2%;
   }
 
   nav .non-mobile-nav {
     display: none;
   }
 
-  #about,
-  #schedule,
-  #staff,
-  #contact {
+  :is(#about, #schedule, #staff, #contact) {
     display: block;
-    font-size: 6vw;
+    font-size: 8vw;
     margin: 0 2vw;
     display: flex;
     justify-content: center;
@@ -845,7 +839,7 @@ footer {
   }
 
   #headline h1 {
-    font-size: 50px;
+    font-size: 12vw;
   }
 
 
@@ -877,16 +871,21 @@ footer {
 
 
   /* staff section */
+  #staff-container {
+    border: 1px solid blue;
+    height: 280vh;
+  }
+
   .staff-image-container {
     flex-direction: column;
-    height: auto;
+    height: 80%;
     gap: 70px;
     position: relative;
   }
 
   .staff-image-container figure {
     width: 80vw;
-    height: 30vh;
+    height: 60vh;
     margin: 10px 0;
   }
 
@@ -895,24 +894,29 @@ footer {
     font-size: 14px;
   }
 
-  #staff-officer-title {
-    font-size: 20px;
-  }
-
-  #staff-officer-names {
-    font-size: 12px;
-  }
-
-  .staff-image-container h3 {
-    font-size: 20px;
+  :is(#vice-pres h2, #sponsor h2) {
+    font-size: 4.5vw;
   }
   
+  :is(#vice-pres a, #sponsor a) {
+    font-size: 5vw;
+  }
+
+  #pres h2 {
+    font-size: 5.5vw;
+  }
+
+  #pres a {
+    font-size: 5vw;
+  }
+
   hr {
     display: none;
   }
 
   .officer-section {
-    height: auto;
+    height: 20%;
+    position: relative;
     gap: 20px;
     display: flex;
     justify-content: space-around;
@@ -920,8 +924,17 @@ footer {
     padding: 30px;
   }
 
+  .officer-section::before {
+    content: '';
+    width: 80%;
+    border: 1px solid black;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+  }
+
   #staff-officer-title {
-    font-size: 38px;
+    font-size: 10vw;
   }
 
   #staff-officer-names {
@@ -930,14 +943,27 @@ footer {
 
   .officer-mobile {
     display: block;
-    font-size: 20px;
+    font-size: 4.5vw;
   }
 
   /* Fall Schedule */
 
   #fall-schedule {
-    height: 100vh;
+    height: 120vh;
   }
+
+  .fall-schedule-left {
+    height: 40%;
+  }
+
+  .fall-schedule-right {
+    height: 60%;
+  }
+
+  #fs-scroll-wheel button {
+    font-size: 5vw;
+  }
+
 
   /* Feedback section */
   #feedback-section {
