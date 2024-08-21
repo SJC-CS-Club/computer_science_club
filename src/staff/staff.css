@@ -1,0 +1,217 @@
+#staff-container {
+  height: 85vh;
+  width: 100%;
+}
+
+hr {
+  width: 60vw;
+  margin: 0 auto;
+}
+
+.tiled-bg {
+  background-image: url("/images/example.png");
+  transform: rotate(30deg);
+}
+
+.staff-image-container {
+  width: 100%;
+  height: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.staff-image-container figure {
+  width: 18vw;
+  height: 50vh;
+  border: 1px solid black;
+  border-radius: 5px;
+  margin: 0 60px;
+}
+
+#pres {
+  background-image: url("/images/staff-image-three.jpg");
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  box-shadow: -4px 8px 8px gray;
+}
+
+.staff-image-container a {
+  width: 100%;
+  position: absolute;
+  bottom: -40px;
+  text-align: center;
+  letter-spacing: 0.5px;
+  display: block;
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: bold;
+  color: black;
+}
+
+.staff-image-container a:hover {
+  text-shadow: 0 0 4px gray;
+  letter-spacing: 0.04em;
+  transition: all 0.1s ease;
+}
+
+.staff-image-container h2 {
+  width: 100%;
+  position: absolute;
+  top: -45px;
+  text-align: center;
+  font-family: "Playwrite US Modern";
+  letter-spacing: 1px;
+  font-weight: 400;
+}
+
+#vice-pres,
+#sponsor {
+  transform: scale(0.9);
+}
+
+#vice-pres {
+  background-image: url("/images/staff-image-three.jpg");
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  box-shadow: 0 8px 8px gray;
+}
+
+#sponsor {
+  background-image: url("/images/staff-image-six.jpg");
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  box-shadow: 0 8px 8px gray;
+}
+
+.officer-section {
+  height: 15vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* For mobile use */
+.officer-mobile {
+  display: none;
+}
+
+#staff-officer-title {
+  text-align: center;
+  font-size: 28px;
+  margin-top: 15px;
+}
+
+#staff-officer-names {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+/* Tablet Design */
+@media screen and (max-width: 768px) {
+  #staff-container {
+    height: 160vh;
+  }
+
+  .staff-image-container {
+    flex-direction: column;
+    height: 85%;
+  }
+
+  .staff-image-container figure {
+    width: 60vw;
+    height: 40vh;
+    margin: 40px auto;
+  }
+
+  .staff-image-container h2 {
+    font-size: 20px;
+  }
+
+  .officer-section {
+    height: 15%;
+    padding: 20px;
+  }
+}
+
+/* Mobile Design */
+@media screen and (max-width: 480px) {
+  #staff-container {
+    height: 280vh;
+  }
+
+  .staff-image-container {
+    flex-direction: column;
+    height: 80%;
+    gap: 70px;
+    position: relative;
+  }
+
+  .staff-image-container figure {
+    width: 80vw;
+    height: 60vh;
+    margin: 10px 0;
+  }
+
+  .staff-image-container h3,
+  .staff-image-container h2 {
+    font-size: 14px;
+  }
+
+  :is(#vice-pres h2, #sponsor h2) {
+    font-size: 4.5vw;
+  }
+
+  :is(#vice-pres a, #sponsor a) {
+    font-size: 5vw;
+  }
+
+  #pres h2 {
+    font-size: 5.5vw;
+  }
+
+  #pres a {
+    font-size: 5vw;
+  }
+
+  hr {
+    display: none;
+  }
+
+  .officer-section {
+    height: 20%;
+    position: relative;
+    gap: 20px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 30px;
+  }
+
+  .officer-section::before {
+    content: "";
+    width: 80%;
+    border: 1px solid black;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+  }
+
+  #staff-officer-title {
+    font-size: 10vw;
+  }
+
+  #staff-officer-names {
+    display: none;
+  }
+
+  .officer-mobile {
+    display: block;
+    font-size: 4.5vw;
+  }
+}

@@ -22,6 +22,15 @@
     />
     <script src="./src/script.js" defer></script>
     <script src="./src/button.js" defer></script>
+    <link rel="stylesheet" href="./src/nav/nav.css">
+    <link rel="stylesheet" href="./src/homepage/homepage.css">
+    <link rel="stylesheet" href="./src/stats/stats.css">
+    <link rel="stylesheet" href="./src/carousel/carousel.css">
+    <link rel="stylesheet" href="./src/staff/staff.css">
+    <link rel="stylesheet" href="./src/schedule/schedule.css">
+    <link rel="stylesheet" href="./src/location/location.css">
+    <link rel="stylesheet" href="./src/feedback/feedback.css">
+    <link rel="stylesheet" href="./src/footer/footer.css">
   </head>
 
   <body>
@@ -33,17 +42,17 @@
       <a href="#footer" class="non-mobile-nav">Contact Us</a>
 
       <!-- for mobile specifically -->
-      <a href="#" id="about"><i class='bx bx-info-circle'></i></a>
-      <a href="#" id="staff"><i class='bx bx-user'></i></a>
-      <a href="#" id="schedule"><i class='bx bx-calendar'></i></a>
-      <a href="#" id="contact"><i class="bx bxs-contact"></i></a>
+      <a href="#stats" id="about"><i class='bx bx-info-circle'></i></a>
+      <a href="#staff-container" id="staff"><i class='bx bx-user'></i></a>
+      <a href="#fall-schedule" id="schedule"><i class='bx bx-calendar'></i></a>
+      <a href="#footer" id="contact"><i class="bx bxs-contact"></i></a>
     </nav>
 
     <!-- Main Homepage -->
     <header>
       <figure alt="Techy desk stock photo"></figure>
       <div id="headline">
-        <h1>Computer Science<span class="gradient">Club</span></h1>
+        <h1>Computer Science<span class="gradient"><br>Club</span></h1>
       </div>
       <div id="buttons">
         <button id="join-us">Join Us</button>
@@ -118,22 +127,21 @@
         <aside class="fall-schedule-right">
           <div class="fall-schedule-right-inner" id="fall-agenda">Weekly Agenda</div>
           <div id="fs-scroll-wheel" class="fall-schedule-right-inner">
-            <button class="fall-info-buttons">Week 1 | Intro to the Club | (08/27/24)</button>
-            <button class="fall-info-buttons">Week 2 | Intro to Problem-Solving and Critial Thinking | (09/03/24)</button>
-            <button class="fall-info-buttons">Week 3 | Intro to different Computer Science Fields | (09/10/24)</button>
-            <button class="fall-info-buttons">Week 4 | Intro to Git and GitHub | (09/17/24)</button>
-            <button class="fall-info-buttons">Week 5 | Intro to Cybersecurity | (09/24/24)</button>
-            <button class="fall-info-buttons">Week 6 | Python Basics | (10/01/24)</button>
-            <button class="fall-info-buttons">Week 7 | Intermediate Python Programming | (10/08/24)</button>
-            <button class="fall-info-buttons">Week 8 | Intro to Software Engineering & Best Practices | (10/15/24)</button>
-            <button class="fall-info-buttons">Week 9 | Intro to Game Development | (10/22/24)</button>
-            <button class="fall-info-buttons">Week 10 | Intro to Web Development | (10/29/24)</button>
-            <button class="fall-info-buttons">Week 11 | Intermediate Web Development | (11/05/24)</button>
-            <button class="fall-info-buttons">Week 12 | Building a Personal Porfolio (Part 1) | (11/12/24)
+            <button class="fall-info-buttons">Week 1 | (08/27/24)<br>Intro to the Club</button>
+            <button class="fall-info-buttons">Week 2 | (09/03/24)<br>Intro to Problem-Solving and Critial Thinking</button>
+            <button class="fall-info-buttons">Week 3 | (09/10/24)<br>Intro to Git and GitHub</button>
+            <button class="fall-info-buttons">Week 4 | (09/17/24)<br>Intro to Cybersecurity</button>
+            <button class="fall-info-buttons">Week 5 | (09/24/24)<br>Python Basics</button>
+            <button class="fall-info-buttons">Week 6 | (10/01/24)<br>Intermediate Python Programming</button>
+            <button class="fall-info-buttons">Week 7 | (10/08/24)<br>Intro to Software Engineering & Best Practices</button>
+            <button class="fall-info-buttons">Week 8 | (10/15/24)<br>Intro to Game Development</button>
+            <button class="fall-info-buttons">Week 9 | (10/22/24)<br>Intro to Web Development</button>
+            <button class="fall-info-buttons">Week 10 | (10/29/24)<br>Intermediate Web Development</button>
+            <button class="fall-info-buttons">Week 11 | (11/05/24)<br>Building a Personal Porfolio (Part 1)
             </button>
-            <button class="fall-info-buttons">Week 13 | Building a Personal Porfolio (Part 2) | (11/19/24)</button>
-            <button class="fall-info-buttons">Week 14 | Build a final Project / Coding Competition | (11/26/24)</button>
-            <button class="fall-info-buttons">Week 15 | Final Presentations & End-of-Year Party | (12/03/24)</button>
+            <button class="fall-info-buttons">Week 12 | (11/12/24)<br>Building a Personal Porfolio (Part 2)</button>
+            <button class="fall-info-buttons">Week 13 | (11/19/24)<br>Build a final Project / Coding Competition</button>
+            <button class="fall-info-buttons">Week 14 | (12/03/24)<br>Final Presentations & End-of-Year Party</button>
           </div>
         </aside>
       </section>
@@ -185,7 +193,7 @@
         <div class="footer-section" id="footer-card-one">
           <h3>Meeting Times & Directions</h3>
           <div>Tuesday's | 4:00 - 6:00 pm</div>
-          <div>Building 8 (Engineering Building) Room 207</div>
+          <div>Building 2 (STEM Building) Room 207</div>
           <div>Duration: 8/27/24 - 12/3/24</div>
         </div>
         <div class="footer-section" id="footer-card-two">

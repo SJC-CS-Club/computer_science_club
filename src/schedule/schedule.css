@@ -1,0 +1,153 @@
+#fall-schedule {
+  height: 60vh;
+  width: 100%;
+  display: flex;
+  background-color: lightgray;
+}
+
+.fall-schedule-left {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+  padding-left: 60px;
+  width: 70%;
+}
+
+.fall-schedule-left h1 {
+  font-size: 48px;
+  width: 100%;
+}
+
+.fall-schedule-left p {
+  font-size: 24px;
+  width: 100%;
+}
+
+.fall-schedule-right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  gap: 40px;
+}
+
+#fall-agenda {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 10%;
+  font-size: 32px;
+  font-weight: bold;
+  border-bottom: 1px solid black;
+}
+
+.fall-schedule-right-inner {
+  width: 70%;
+}
+
+#fs-scroll-wheel {
+  display: flex;
+  overflow: scroll;
+  overflow-x: hidden;
+  flex-direction: column;
+  width: 70%;
+  height: 300px;
+}
+
+#fs-scroll-wheel button {
+  height: 100px;
+  width: 100%;
+  font-size: 24px;
+  display: block;
+  flex-shrink: 0;
+  text-align: left;
+  padding-left: 20px;
+}
+
+/* Popup Section for the button */
+.popup {
+  display: none;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+}
+
+.popup-content {
+  position: relative;
+  margin: 15% auto;
+  padding: 20px;
+  width: 80%;
+  max-width: 600px;
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 30px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+
+/* Tablet Design */
+@media screen and (max-width: 768px) {
+  #fall-schedule {
+    flex-direction: column;
+    height: 80vh;
+  }
+
+  .fall-schedule-left {
+    height: 35%;
+    width: 100%;
+    padding-left: 20px;
+  }
+
+  .fall-schedule-left h1,
+  .fall-schedule-left p {
+    text-align: center;
+    padding-right: 45px;
+  }
+
+  .fall-schedule-right {
+    height: 65%;
+  }
+
+  #fall-agenda {
+    width: 80%;
+  }
+
+  #fs-scroll-wheel {
+    width: 80%;
+  }
+}
+
+
+/* Mobile Design */
+@media screen and (max-width: 480px) {
+  #fall-schedule {
+    height: 120vh;
+  }
+
+  .fall-schedule-left {
+    height: 40%;
+  }
+
+  .fall-schedule-right {
+    height: 60%;
+  }
+
+  #fs-scroll-wheel button {
+    font-size: 5vw;
+  }
+}

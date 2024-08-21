@@ -1,0 +1,139 @@
+.carousel {
+  height: 600px;
+  background-color: darkgray;
+  position: relative;
+  overflow: hidden;
+  z-index: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url("/images/background-image-two.jpg");
+  background-position: center;
+  background-size: cover;
+}
+
+.carousel-inner {
+  width: 55%;
+  height: 85%;
+  position: relative;
+  z-index: 2;
+  display: flex;
+  border-radius: 10px;
+}
+
+.carousel-item {
+  background-position: center;
+  background-size: cover;
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  transition: transform 0.5s ease, opacity 0.5s ease;
+  opacity: 0;
+  z-index: 1;
+  border-radius: 10px;
+}
+
+.carousel-item.active {
+  opacity: 1;
+  z-index: 2;
+  transform: translateX(0);
+}
+
+.carousel-item.next {
+  transform: translateX(100%);
+}
+
+.carousel-item.prev {
+  transform: translateX(-100%);
+}
+
+#left {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  z-index: 3;
+  left: 17%;
+}
+
+#left:hover {
+  cursor: pointer;
+}
+
+#left i {
+  font-size: 24px;
+}
+
+#right {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  z-index: 3;
+  right: 17%;
+}
+
+#right:hover {
+  cursor: pointer;
+}
+
+#right i {
+  font-size: 24px;
+}
+
+/* Laptop Design*/
+@media screen and (max-width: 1024px) {
+  .carousel-inner {
+    width: 75%;
+  }
+
+  #left {
+    left: 5%;
+  }
+
+  #right {
+    right: 5%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .carousel {
+    height: 450px;
+  }
+
+  .carousel-inner {
+    height: 75%;
+    width: 80%;
+  }
+
+  .carousel-item {
+    background-size: cover;
+  }
+
+  #left {
+    left: 40%;
+    bottom: 2%;
+    width: 40px;
+    height: 40px;
+  }
+
+  #right {
+    bottom: 2%;
+    right: 40%;
+    width: 40px;
+    height: 40px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .carousel-item {
+    background-size: contain;
+  }
+
+  #right {
+    right: 30%;
+  }
+
+  #left {
+    left: 30%;
+  }
+}

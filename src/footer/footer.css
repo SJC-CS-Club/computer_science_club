@@ -1,0 +1,131 @@
+footer {
+  height: 40vh;
+  display: flex;
+  flex-direction: column;
+  background-color: lightgray;
+  flex-wrap: wrap;
+}
+
+.footer-container {
+  width: 100%;
+  height: 90%;
+  display: flex;
+}
+
+.footer-section {
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  font-size: 18px;
+}
+
+.footer-section div,
+.footer-section h3 {
+  width: 80%;
+  text-align: center;
+}
+
+#footer-ending {
+  text-align: center;
+}
+
+#footer-card-two a {
+  text-decoration: none;
+}
+
+#footer-card-two a:hover {
+  text-shadow: 0 0 4px gray;
+  letter-spacing: 0.02em;
+  transition: all 0.1s ease;
+}
+
+#footer-card-three p,
+#footer-card-three form {
+  width: 80%;
+}
+
+#footer-card-three form {
+  display: flex;
+  justify-content: space-between;
+}
+
+#footer-card-three p {
+  text-align: center;
+}
+
+#footer-card-three input {
+  width: 55%;
+  height: 30px;
+  padding: 10px;
+}
+
+#footer-card-three button {
+  width: 40%;
+  height: 30px;
+  overflow: hidden;
+}
+
+.contact-socials {
+  display: flex;
+  height: 20%;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.contact-socials a {
+  font-size: 2.5vw;
+  color: black;
+}
+
+.contact-socials a:hover {
+  text-shadow: 0 0 4px gray;
+  letter-spacing: 0.02em;
+  transition: all 0.1s ease;
+  transform: scale(1.05);
+}
+
+
+/* Tablet Design */
+@media screen and (max-width: 768px) {
+  #footer {
+    height: 110vh;
+  }
+
+  .footer-container {
+    flex-direction: column;
+    height: 95%;
+  }
+
+  .footer-section {
+    height: 25%;
+    width: 100%;
+    border-bottom: 1px solid black;
+  }
+
+  .footer-section h3 {
+    font-size: 26px;
+  }
+
+  #footer-card-one div {
+    font-size: 20px;
+  }
+
+  #footer-card-four a {
+    font-size: 34px;
+  }
+}
+
+
+/* Mobile Design */
+@media screen and (max-width: 480px) {
+  #footer {
+    height: 150vh;
+  }
+
+  #footer-ending {
+    margin-top: 20px;
+  }
+}

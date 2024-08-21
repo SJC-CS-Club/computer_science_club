@@ -1,0 +1,38 @@
+#location {
+  height: 50vh;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.map-container {
+  height: 100%;
+  width: 50%;
+  padding: 20px;
+}
+
+#location h1 {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 38px;
+}
+
+@media screen and (max-width: 768px) {
+  #location {
+    flex-direction: column;
+    height: 70vh;
+  }
+
+  .map-container {
+    width: 100%;
+    height: 70%;
+    padding: 20px;
+  }
+
+  #location h1 {
+    height: 30%;
+    width: 100%;
+  }
+}
