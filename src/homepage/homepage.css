@@ -63,6 +63,10 @@ header #buttons {
   color: black;
 }
 
+#buttons a {
+  text-decoration: none;
+}
+
 #buttons #join-us:hover {
   background: linear-gradient(snow, snow) padding-box,
     linear-gradient(45deg, #e770ff, #ffbf60, #5cbeff) border-box;
@@ -70,6 +74,10 @@ header #buttons {
 
 #buttons #learn-more {
   background: black;
+  color: snow;
+}
+
+#buttons #learn-more a {
   color: snow;
 }
 
