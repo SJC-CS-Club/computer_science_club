@@ -19,7 +19,6 @@ footer {
   align-items: center;
   flex-direction: column;
   gap: 10%;
-
 }
 
 .footer-section div {
@@ -34,14 +33,13 @@ footer {
   font-size: clamp(8px, 2vw, 28px);
 }
 
-
 #footer-card-two a {
   text-decoration: none;
   font-size: clamp(10px, 2vw, 20px);
   width: 90%;
   text-align: center;
+  color: black;
 }
-
 
 #footer-card-three p {
   width: 90%;
@@ -57,6 +55,7 @@ footer {
 #footer-card-three input {
   height: 100%;
   width: 65%;
+  padding-left: 5%;
 }
 
 #footer-card-three button {
@@ -70,7 +69,9 @@ footer {
 }
 
 #footer-card-four a {
-  font-size: clamp(10px, 2vw, 35px);
+  font-size: clamp(10px, 4vw, 35px);
+  border: 1px solid red;
+  color: black;
 }
 
 #footer-card-four .contact-socials {
@@ -84,14 +85,18 @@ footer {
   padding-top: 10px;
 }
 
-
+@media screen and (max-width: 1024px) {
+  #footer-card-four a {
+    font-size: clamp(10px, 4vw, 35px);
+  }
+}
 
 /* Tablet Design */
 @media screen and (max-width: 768px) {
   #footer {
-    height: 100vh;
+    height: 140vh;
   }
-  
+
   .footer-container {
     flex-direction: column;
     width: 100%;
@@ -113,12 +118,13 @@ footer {
     font-size: clamp(22px, 3vw, 40px);
   }
 
-  #footer-card-two a, #footer-card-three p {
+  #footer-card-two a,
+  #footer-card-three p {
     font-size: clamp(22px, 2.75vw, 40px);
   }
 
   #footer-card-four a {
-    font-size: clamp(22px, 5vw, 40px);
+    font-size: clamp(30px, 8vw, 40px);
   }
 
   #footer-ending {
@@ -131,14 +137,10 @@ footer {
   }
 }
 
-
-
-
 /* Mobile Design */
 @media screen and (max-width: 480px) {
   #footer {
     height: 200vh;
-    border: 2px solid red;
   }
 
   .footer-container {
@@ -152,5 +154,9 @@ footer {
 
   .footer-section h3 {
     font-size: 40px;
+  }
+
+  #footer-card-four a {
+    font-size: clamp(30px, 12vw, 80px);
   }
 }

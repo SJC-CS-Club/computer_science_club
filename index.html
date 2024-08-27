@@ -15,22 +15,26 @@
       href="https://fonts.googleapis.com/css2?family=Cutive+Mono&display=swap"
       rel="stylesheet"
     />
-    <link href="https://fonts.googleapis.com/css2?family=Playwrite+US+Modern:wght@100..400&display=swap" rel="stylesheet"/>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playwrite+US+Modern:wght@100..400&display=swap"
+      rel="stylesheet"
+    />
     <link
       href="https://fonts.googleapis.com/css2?family=Cutive+Mono&family=Roboto+Slab:wght@100..900&display=swap"
       rel="stylesheet"
     />
     <script src="./src/script.js" defer></script>
     <script src="./src/button.js" defer></script>
-    <link rel="stylesheet" href="./src/nav/nav.css">
-    <link rel="stylesheet" href="./src/homepage/homepage.css">
-    <link rel="stylesheet" href="./src/stats/stats.css">
-    <link rel="stylesheet" href="./src/carousel/carousel.css">
-    <link rel="stylesheet" href="./src/staff/staff.css">
-    <link rel="stylesheet" href="./src/schedule/schedule.css">
-    <link rel="stylesheet" href="./src/location/location.css">
-    <link rel="stylesheet" href="./src/feedback/feedback.css">
-    <link rel="stylesheet" href="./src/footer/footer.css">
+    <link rel="stylesheet" href="./src/nav/nav.css" />
+    <link rel="stylesheet" href="./src/homepage/homepage.css" />
+    <link rel="stylesheet" href="./src/stats/stats.css" />
+    <link rel="stylesheet" href="./src/carousel/carousel.css" />
+    <link rel="stylesheet" href="./src/staff/staff.css" />
+    <link rel="stylesheet" href="./src/schedule/schedule.css" />
+    <link rel="stylesheet" href="./src/location/location.css" />
+    <link rel="stylesheet" href="./src/feedback/feedback.css" />
+    <link rel="stylesheet" href="./src/footer/footer.css" />
+    <link rel="stylesheet" href="./src/info/shoutout.css" />
   </head>
 
   <body>
@@ -42,9 +46,9 @@
       <a href="#footer" class="non-mobile-nav">Contact Us</a>
 
       <!-- for mobile specifically -->
-      <a href="#stats" id="about"><i class='bx bx-info-circle'></i></a>
-      <a href="#staff-container" id="staff"><i class='bx bx-user'></i></a>
-      <a href="#fall-schedule" id="schedule"><i class='bx bx-calendar'></i></a>
+      <a href="#stats" id="about"><i class="bx bx-info-circle"></i></a>
+      <a href="#staff-container" id="staff"><i class="bx bx-user"></i></a>
+      <a href="#fall-schedule" id="schedule"><i class="bx bx-calendar"></i></a>
       <a href="#footer" id="contact"><i class="bx bxs-contact"></i></a>
     </nav>
 
@@ -52,7 +56,9 @@
     <header>
       <figure alt="Techy desk stock photo"></figure>
       <div id="headline">
-        <h1>Computer Science<span class="gradient"><br>Club</span></h1>
+        <h1>
+          Computer Science<span class="gradient"><br />Club</span>
+        </h1>
       </div>
       <div id="buttons">
         <button id="join-us">Join Us</button>
@@ -71,13 +77,45 @@
         <h1 id="right-card">Led by top industry experienced staff</h1>
       </section>
 
+      <!-- Announcement Section -->
+      <section id="info">
+        <div class="info-left">
+          <h1>Announcements</h1>
+          <p>
+            This is where you'll find all the latest updates and important news
+            related to the Computer Science Club and our website. We regularly
+            post updates to keep you in the loop about what's happening in the
+            club, so be sure to check back often to stay up-to-date!
+          </p>
+        </div>
+        <div class="info-right">
+          <div class="info-box">
+            <p class="shoutout-item">This is update number 1</p>
+            <p class="shoutout-item">This is update number 2</p>
+            <p class="shoutout-item">This is update number 3</p>
+          </div>
+        </div>
+      </section>
+
       <!-- Carousel Section for Class Pcitures -->
       <section id="pics" class="carousel">
         <div class="carousel-inner">
-          <figure class="carousel-item active" data-image="/images/carousel-image-one.jpg"></figure>
-          <figure class="carousel-item" data-image="/images/carousel-image-two.jpg"></figure>
-          <figure class="carousel-item" data-image="/images/carousel-image-five.jpg"></figure>
-          <figure class="carousel-item" data-image="/images/carousel-image-four.jpg"></figure>
+          <figure
+            class="carousel-item active"
+            data-image="/images/carousel-image-one.jpg"
+          ></figure>
+          <figure
+            class="carousel-item"
+            data-image="/images/carousel-image-two.jpg"
+          ></figure>
+          <figure
+            class="carousel-item"
+            data-image="/images/carousel-image-five.jpg"
+          ></figure>
+          <figure
+            class="carousel-item"
+            data-image="/images/carousel-image-four.jpg"
+          ></figure>
         </div>
         <button class="carousel-control left" id="left">
           <i class="bx bxs-chevron-left"></i>
@@ -95,7 +133,7 @@
             <h2>VICE PRESIDENT</h2>
           </figure>
           <figure id="pres">
-            <a href="mailto:Paz.n089158@stu.sanjac.edu">Paz.n089158@stu.sanjac.edu</a>
+            <a href="#">TBA</a>
             <h2>PRESIDENT</h2>
           </figure>
           <figure id="sponsor">
@@ -106,7 +144,10 @@
         <hr />
         <div class="officer-section">
           <h1 id="staff-officer-title">Officers</h1>
-          <h3 id="staff-officer-names">[member] · President | [member] · Vice President | [member] · SGA | [member] · Secretary | [member] · Treasurer</h3>
+          <h3 id="staff-officer-names">
+            [member] · President | [member] · Vice President | [member] · SGA |
+            [member] · Secretary | [member] · Treasurer
+          </h3>
 
           <!-- For mobile section -->
           <h3 class="officer-mobile">[Member] · President</h3>
@@ -120,28 +161,63 @@
       <!-- Fall Schedule Section -->
       <section id="fall-schedule">
         <aside class="fall-schedule-left">
-            <h1>Fall Schedule</h1>
-            <p>
-              Each section contains information about what we're learning that week and what to expect coming to the club. Click on the week you're interested in for more information!</p>
+          <h1>Fall Schedule</h1>
+          <p>
+            Each section contains information about what we're learning that
+            week and what to expect coming to the club. Click on the week you're
+            interested in for more information!
+          </p>
         </aside>
         <aside class="fall-schedule-right">
-          <div class="fall-schedule-right-inner" id="fall-agenda">Weekly Agenda</div>
+          <div class="fall-schedule-right-inner" id="fall-agenda">
+            Weekly Agenda
+          </div>
           <div id="fs-scroll-wheel" class="fall-schedule-right-inner">
-            <button class="fall-info-buttons">Week 1 | (08/27/24)<br>Intro to the Club</button>
-            <button class="fall-info-buttons">Week 2 | (09/03/24)<br>Intro to Problem-Solving and Critial Thinking</button>
-            <button class="fall-info-buttons">Week 3 | (09/10/24)<br>Intro to Git and GitHub</button>
-            <button class="fall-info-buttons">Week 4 | (09/17/24)<br>Intro to Cybersecurity</button>
-            <button class="fall-info-buttons">Week 5 | (09/24/24)<br>Python Basics</button>
-            <button class="fall-info-buttons">Week 6 | (10/01/24)<br>Intermediate Python Programming</button>
-            <button class="fall-info-buttons">Week 7 | (10/08/24)<br>Intro to Software Engineering & Best Practices</button>
-            <button class="fall-info-buttons">Week 8 | (10/15/24)<br>Intro to Game Development</button>
-            <button class="fall-info-buttons">Week 9 | (10/22/24)<br>Intro to Web Development</button>
-            <button class="fall-info-buttons">Week 10 | (10/29/24)<br>Intermediate Web Development</button>
-            <button class="fall-info-buttons">Week 11 | (11/05/24)<br>Building a Personal Porfolio (Part 1)
+            <button class="fall-info-buttons">
+              Week 1 | (08/27/24)<br />Intro to the Club
             </button>
-            <button class="fall-info-buttons">Week 12 | (11/12/24)<br>Building a Personal Porfolio (Part 2)</button>
-            <button class="fall-info-buttons">Week 13 | (11/19/24)<br>Build a final Project / Coding Competition</button>
-            <button class="fall-info-buttons">Week 14 | (12/03/24)<br>Final Presentations & End-of-Year Party</button>
+            <button class="fall-info-buttons">
+              Week 2 | (09/03/24)<br />Intro to Problem-Solving and Critial
+              Thinking
+            </button>
+            <button class="fall-info-buttons">
+              Week 3 | (09/10/24)<br />Intro to Git and GitHub
+            </button>
+            <button class="fall-info-buttons">
+              Week 4 | (09/17/24)<br />Intro to Cybersecurity
+            </button>
+            <button class="fall-info-buttons">
+              Week 5 | (09/24/24)<br />Python Basics
+            </button>
+            <button class="fall-info-buttons">
+              Week 6 | (10/01/24)<br />Intermediate Python Programming
+            </button>
+            <button class="fall-info-buttons">
+              Week 7 | (10/08/24)<br />Intro to Software Engineering & Best
+              Practices
+            </button>
+            <button class="fall-info-buttons">
+              Week 8 | (10/15/24)<br />Intro to Game Development
+            </button>
+            <button class="fall-info-buttons">
+              Week 9 | (10/22/24)<br />Intro to Web Development
+            </button>
+            <button class="fall-info-buttons">
+              Week 10 | (10/29/24)<br />Intermediate Web Development
+            </button>
+            <button class="fall-info-buttons">
+              Week 11 | (11/05/24)<br />Building a Personal Porfolio (Part 1)
+            </button>
+            <button class="fall-info-buttons">
+              Week 12 | (11/12/24)<br />Building a Personal Porfolio (Part 2)
+            </button>
+            <button class="fall-info-buttons">
+              Week 13 | (11/19/24)<br />Build a final Project / Coding
+              Competition
+            </button>
+            <button class="fall-info-buttons">
+              Week 14 | (12/03/24)<br />Final Presentations & End-of-Year Party
+            </button>
           </div>
         </aside>
       </section>
@@ -149,42 +225,63 @@
       <!-- Popup content for the Fall-schedule -->
       <div id="popup" class="popup">
         <div class="popup-content">
-            <span class="close-button">&times;</span>
-            <p id="popup-message">This is a placeholder message.</p>
+          <span class="close-button">&times;</span>
+          <p id="popup-message">This is a placeholder message.</p>
         </div>
       </div>
-    
 
       <!-- Location Section -->
       <section id="location">
         <div class="map-container">
-          <iframe 
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6939.633098337566!2d-95.20599982500754!3d29.57994054043032!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x86409a3d1006ab8f%3A0x392d12b89cc394b3!2sSan%20Jacinto%20College%20South!5e0!3m2!1sen!2sus!4v1721014873686!5m2!1sen!2sus" 
-          width="100%" 
-          height="100%" 
-          style="border: none; border-radius: 10px;   box-shadow: -2px 2px 6px gray;" 
-          allowfullscreen="" 
-          loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6939.633098337566!2d-95.20599982500754!3d29.57994054043032!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x86409a3d1006ab8f%3A0x392d12b89cc394b3!2sSan%20Jacinto%20College%20South!5e0!3m2!1sen!2sus!4v1721014873686!5m2!1sen!2sus"
+            width="100%"
+            height="100%"
+            style="
+              border: none;
+              border-radius: 10px;
+              box-shadow: -2px 2px 6px gray;
+            "
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
         </div>
         <h1>Our Location</h1>
       </section>
 
-     <!-- Feedback Section -->
-     <section id="feedback-section">
+      <!-- Feedback Section -->
+      <section id="feedback-section">
         <div class="feedback-left">
           <h1>Feedback</h1>
-          <p>We'd love to hear about how we can improve our club experience for the students!
-            <span class="feedback-span">(This section is currently under construction and won't work as intended. To give feedback, contact the president: <a href="mailto:Paz.n089158@stu.sanjac.edu">Paz.n089158@stu.sanjac.edu</a>)</span>
+          <p>
+            We'd love to hear about how we can improve our club experience for
+            the students!
+            <span class="feedback-span"
+              >(This section is currently under construction and won't work as
+              intended. Check back soon!)</span
+            >
           </p>
         </div>
         <div class="feedback-right">
-          <form action="mailto:Paz.n089158@stu.sanjac.edu" method="post" enctype="text/plain">
-            <label for="feedback"></label><br>
-            <textarea id="feedback" name="feedback" rows="4" cols="50" placeholder="Enter feedback for improvements!"></textarea><br><br>
-            <input type="submit" value="Send Feedback">
+          <form
+            action="mailto:Paz.n089158@stu.sanjac.edu"
+            method="post"
+            enctype="text/plain"
+          >
+            <label for="feedback"></label><br />
+            <textarea
+              id="feedback"
+              name="feedback"
+              rows="4"
+              cols="50"
+              placeholder="Enter feedback for improvements!"
+            ></textarea
+            ><br /><br />
+            <input type="submit" value="Send Feedback" />
           </form>
         </div>
-     </section>
+      </section>
     </main>
 
     <!-- Footer Section -->
@@ -199,28 +296,58 @@
         <div class="footer-section" id="footer-card-two">
           <h3>Legal</h3>
           <a href="./src/privacy_policy.html" target="_blank">Privacy Policy</a>
-          <a href="./src/terms_of_service.html" target="_blank">Terms of Service</a>
+          <a href="./src/terms_of_service.html" target="_blank"
+            >Terms of Service</a
+          >
           <a href="#">Disclaimer</a>
           <a href="#">Accessibility Statement</a>
         </div>
         <div class="footer-section" id="footer-card-three">
           <h3>Newsletter</h3>
-          <p>Sign up for our newsletter to stay updated on the latest news and events. <span>This section is under construction and won't work as intended.Check back soon!</span></p>
+          <p>
+            Sign up for our newsletter to stay updated on the latest news and
+            events.
+            <span
+              >This section is under construction and won't work as
+              intended.Check back soon!</span
+            >
+          </p>
           <form>
-            <input type="email" placeholder="Your email address" name="email" autocomplete="email" required>
+            <input
+              type="email"
+              placeholder="Your email address"
+              name="email"
+              autocomplete="email"
+              required
+            />
             <button type="submit">Subscribe</button>
           </form>
         </div>
         <div class="footer-section" id="footer-card-four">
           <h3>Contact</h3>
           <div class="contact-socials">
-            <a href="https://github.com/SJC-CS-Club" target="_blank" class="footer-item"><i class='bx bxl-github'></i></a>
-          <a href="https://discord.gg/6J7rg299FN" target="_blank" class="footer-item"><i class='bx bxl-discord' ></i></a>
-          <a href="mailto:Paz.n089158@stu.sanjac.edu" class="footer-item"><i class='bx bx-envelope' ></i></a>
+            <a
+              href="https://github.com/SJC-CS-Club"
+              target="_blank"
+              class="footer-item"
+              ><i class="bx bxl-github"></i
+            ></a>
+            <a
+              href="https://discord.gg/6J7rg299FN"
+              target="_blank"
+              class="footer-item"
+              ><i class="bx bxl-discord"></i
+            ></a>
+            <a href="mailto:Paz.n089158@stu.sanjac.edu" class="footer-item"
+              ><i class="bx bx-envelope"></i
+            ></a>
           </div>
         </div>
       </div>
-      <p id="footer-ending">&copy; 2024 San Jacinto South Computer Science Club Copyright | All Rights Reserved</p>
+      <p id="footer-ending">
+        &copy; 2024 San Jacinto South Computer Science Club Copyright | All
+        Rights Reserved
+      </p>
     </footer>
   </body>
 </html>
