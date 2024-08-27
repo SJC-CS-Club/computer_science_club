@@ -25,8 +25,8 @@
 }
 
 .feedback-left p {
-  font-size: 18px;
-  width: 50%;
+  font-size: clamp(20px, 2vw, 24px);
+  width: 80%;
 }
 
 .feedback-right {
@@ -63,6 +63,20 @@
 span {
   color: rgb(183, 11, 11);
 }
+
+
+
+
+@media screen and (max-width: 768px) {
+  #feedback {
+    width: 80%;
+  }
+
+  .feedback-left p {
+    width: 90%;
+  }
+}
+
 
 
 /* Mobile Design */

@@ -1,5 +1,5 @@
 footer {
-  height: 40vh;
+  height: 50vh;
   display: flex;
   flex-direction: column;
   background-color: lightgray;
@@ -15,117 +15,148 @@ footer {
 .footer-section {
   width: 25%;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  gap: 20px;
-  font-size: 18px;
+  align-items: center;
+  flex-direction: column;
+  gap: 10%;
 }
 
-.footer-section div,
+.footer-section div {
+  width: 90%;
+  text-align: center;
+  font-size: clamp(16px, 2vw, 20px);
+}
+
 .footer-section h3 {
-  width: 80%;
+  width: 90%;
   text-align: center;
-}
-
-#footer-ending {
-  text-align: center;
+  font-size: clamp(8px, 2vw, 28px);
 }
 
 #footer-card-two a {
   text-decoration: none;
+  font-size: clamp(10px, 2vw, 20px);
+  width: 90%;
+  text-align: center;
+  color: black;
 }
 
-#footer-card-two a:hover {
-  text-shadow: 0 0 4px gray;
-  letter-spacing: 0.02em;
-  transition: all 0.1s ease;
-}
-
-#footer-card-three p,
-#footer-card-three form {
-  width: 80%;
+#footer-card-three p {
+  width: 90%;
 }
 
 #footer-card-three form {
+  width: 90%;
+  height: 15%;
   display: flex;
   justify-content: space-between;
 }
 
-#footer-card-three p {
-  text-align: center;
-}
-
 #footer-card-three input {
-  width: 55%;
-  height: 30px;
-  padding: 10px;
+  height: 100%;
+  width: 65%;
+  padding-left: 5%;
 }
 
 #footer-card-three button {
-  width: 40%;
-  height: 30px;
-  overflow: hidden;
+  height: 100%;
+  width: 30%;
 }
 
-.contact-socials {
-  display: flex;
-  height: 20%;
-  justify-content: space-around;
-  align-items: center;
+#footer-card-three p {
+  font-size: clamp(10px, 2vw, 20px);
+  text-align: center;
 }
 
-.contact-socials a {
-  font-size: 2.5vw;
+#footer-card-four a {
+  font-size: clamp(10px, 4vw, 35px);
+  border: 1px solid red;
   color: black;
 }
 
-.contact-socials a:hover {
-  text-shadow: 0 0 4px gray;
-  letter-spacing: 0.02em;
-  transition: all 0.1s ease;
-  transform: scale(1.05);
+#footer-card-four .contact-socials {
+  display: flex;
+  justify-content: space-around;
 }
 
+#footer-ending {
+  text-align: center;
+  height: 10%;
+  padding-top: 10px;
+}
+
+@media screen and (max-width: 1024px) {
+  #footer-card-four a {
+    font-size: clamp(10px, 4vw, 35px);
+  }
+}
 
 /* Tablet Design */
 @media screen and (max-width: 768px) {
   #footer {
-    height: 110vh;
+    height: 140vh;
   }
 
   .footer-container {
     flex-direction: column;
-    height: 95%;
+    width: 100%;
   }
 
   .footer-section {
-    height: 25%;
     width: 100%;
-    border-bottom: 1px solid black;
+    height: 95%;
+    gap: 5%;
+    border: 1px solid black;
   }
 
   .footer-section h3 {
-    font-size: 26px;
+    height: 20%;
+    font-size: clamp(26px, 4.75vw, 55px);
   }
 
-  #footer-card-one div {
-    font-size: 20px;
+  .footer-section div {
+    font-size: clamp(22px, 3vw, 40px);
+  }
+
+  #footer-card-two a,
+  #footer-card-three p {
+    font-size: clamp(22px, 2.75vw, 40px);
   }
 
   #footer-card-four a {
-    font-size: 34px;
+    font-size: clamp(30px, 8vw, 40px);
+  }
+
+  #footer-ending {
+    height: 10%;
+    font-size: clamp(22px, 2.5vw, 40px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5%;
   }
 }
-
 
 /* Mobile Design */
 @media screen and (max-width: 480px) {
   #footer {
-    height: 150vh;
+    height: 200vh;
   }
 
-  #footer-ending {
-    margin-top: 20px;
+  .footer-container {
+    flex-direction: column;
+  }
+
+  .footer-section {
+    width: 100%;
+    height: 100%;
+  }
+
+  .footer-section h3 {
+    font-size: 40px;
+  }
+
+  #footer-card-four a {
+    font-size: clamp(30px, 12vw, 80px);
   }
 }
