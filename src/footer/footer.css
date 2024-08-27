@@ -39,7 +39,7 @@ footer {
   width: 90%;
   text-align: center;
   color: black;
-}
+} 
 
 #footer-card-three p {
   width: 90%;
@@ -70,7 +70,6 @@ footer {
 
 #footer-card-four a {
   font-size: clamp(10px, 4vw, 35px);
-  border: 1px solid red;
   color: black;
 }
 

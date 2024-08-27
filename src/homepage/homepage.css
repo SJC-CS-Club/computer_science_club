@@ -63,6 +63,10 @@ header #buttons {
   color: black;
 }
 
+#buttons #join-us a {
+  color: black;
+}
+
 #buttons a {
   text-decoration: none;
 }
