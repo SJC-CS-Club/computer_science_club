@@ -61,6 +61,15 @@
   padding: 20px;
 }
 
+.info-box span {
+  display: inline-block;
+  padding: 10px;
+}
+
+.info-box span a {
+  color: blue;
+}
+
 @media screen and (max-width: 768px) {
   #info {
     height: 80vh;
