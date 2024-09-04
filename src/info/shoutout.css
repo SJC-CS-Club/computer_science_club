@@ -59,6 +59,7 @@
   background-color: snow;
   border-bottom: 1px solid black;
   padding: 20px;
+  font-size: clamp(14px, 1vw, 24px);
 }
 
 .info-box span {

@@ -1,5 +1,5 @@
 #staff-container {
-  height: 85vh;
+  height: 110vh;
   width: 100%;
 }
 
@@ -17,20 +17,19 @@ hr {
   width: 100%;
   height: 80%;
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
 }
 
 .staff-image-container figure {
-  width: 20vw;
-  height: 50vh;
+  width: 25vw;
+  height: 65vh;
   border: 1px solid black;
   border-radius: 5px;
-  margin: 0 60px;
 }
 
 #pres {
-  background-image: url("/images/staff-image-three.jpg");
+  background-image: url("/images/president.jpg");
   background-position: center;
   background-size: cover;
   position: relative;
@@ -72,7 +71,7 @@ hr {
 }
 
 #vice-pres {
-  background-image: url("/images/staff-image-three.jpg");
+  background-image: url("/images/derrick.png");
   background-position: center;
   background-size: cover;
   position: relative;
@@ -89,12 +88,30 @@ hr {
 
 .officer-section {
   height: 15vh;
+  position: relative;
   display: flex;
   justify-content: space-around;
   align-items: center;
   flex-direction: column;
   gap: 15px;
 }
+
+.see-more {
+  position: absolute;
+  top: 0;
+  right: 5%;
+  font-weight: bold;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100px;
+  height: 20px;
+  font-size: 16px;
+  cursor: pointer;
+  text-decoration: none;
+  color: black;
+}
+
 
 /* For mobile use */
 .officer-mobile {
