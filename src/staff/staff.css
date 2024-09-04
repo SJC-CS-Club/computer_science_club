@@ -44,9 +44,9 @@ hr {
   letter-spacing: 0.5px;
   display: block;
   text-decoration: none;
-  font-size: 20px;
+  font-size: clamp(8px, 2vw, 18px);
   font-weight: bold;
-  color: black;
+  color: black; 
 }
 
 .staff-image-container a:hover {
@@ -98,7 +98,7 @@ hr {
 
 .see-more {
   position: absolute;
-  top: 0;
+  top: 5%;
   right: 5%;
   font-weight: bold;
   display: flex;
@@ -129,20 +129,45 @@ hr {
   margin-bottom: 40px;
 }
 
+
+
+/* Landscape Design */
+@media screen and (max-width: 1024px) {
+  
+  #vice-pres a {
+    left: -2vw;
+  }
+
+  .staff-image-container figure {
+    height: 60vh;
+    width: 30vw;
+  }
+}
+
+
+
 /* Tablet Design */
 @media screen and (max-width: 768px) {
   #staff-container {
-    height: 160vh;
+    height: 300vh;
+  }
+
+  #vice-pres a {
+    left: -3vw;
   }
 
   .staff-image-container {
     flex-direction: column;
-    height: 85%;
+    height: 90%;
+  }
+
+  .staff-image-container a {
+    font-size: clamp(8px, 4vw, 20px);
   }
 
   .staff-image-container figure {
     width: 60vw;
-    height: 40vh;
+    height: 80vh;
     margin: 40px auto;
   }
 
@@ -151,7 +176,7 @@ hr {
   }
 
   .officer-section {
-    height: 15%;
+    height: 10%;
     padding: 20px;
   }
 }
@@ -160,6 +185,10 @@ hr {
 @media screen and (max-width: 480px) {
   #staff-container {
     height: 280vh;
+  }
+
+  #vice-pres a {
+    left: -7vw;
   }
 
   .staff-image-container {

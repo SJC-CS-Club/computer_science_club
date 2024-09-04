@@ -21,11 +21,11 @@
 }
 
 .feedback-left h1 {
-  font-size: 40px;
+  font-size: var(--header-size-normal);
 }
 
 .feedback-left p {
-  font-size: clamp(20px, 2vw, 24px);
+  font-size: clamp(12px, 2vw, 24px);
   width: 80%;
 }
 
@@ -72,6 +72,10 @@ span {
     width: 80%;
   }
 
+  .feedback-left h1 {
+    font-size: var(--header-size-768);
+  }
+
   .feedback-left p {
     width: 90%;
   }
@@ -94,7 +98,7 @@ span {
   }
 
   .feedback-left h1 {
-    font-size: 10vw;
+    font-size: var(--header-size-480);
   }
 
   .feedback-left p {

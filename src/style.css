@@ -6,6 +6,15 @@
   font-family: "Cutive Mono";
 }
 
+:root {
+  --link-size: clamp(8px, 2vw, 16px);
+  --header-size-normal: clamp(20px, 3vw, 48px);
+  --header-size-768: clamp(20px, 6vw, 48px);
+  --header-size-480: clamp(20px, 8vw, 48px);
+  
+}
+
+
 html {
   scroll-behavior: smooth;
   font-size: 16px;

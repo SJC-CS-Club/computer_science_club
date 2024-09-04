@@ -59,7 +59,7 @@
   background-color: snow;
   border-bottom: 1px solid black;
   padding: 20px;
-  font-size: clamp(14px, 1vw, 24px);
+  font-size: clamp(14px, 2vw, 18px);
 }
 
 .info-box span {
@@ -125,5 +125,6 @@
 
   .info-box h3 {
     height: 50%;
+    font-size: clamp(14px, 4vw, 28px);
   }
 }
