@@ -82,21 +82,34 @@
 
 .popup-content {
   position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: clamp(12px, 2vw, 20px);
   margin: 15% auto;
   padding: 20px;
-  max-width: 600px;
+  width: 50vw;
+  /* height: 30vh; */
   background-color: white;
   border-radius: 5px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
 
+.popup-content p {
+  display: block;
+  text-align: left;
+  width: 95%;
+  height: 90%;
+}
+
 .close-button {
   position: absolute;
-  top: 10px;
-  right: 20px;
+  top: 5%;
+  right: 2%;
   font-size: 30px;
   font-weight: bold;
   cursor: pointer;
+  width: 5%;
 }
 
 
@@ -136,6 +149,12 @@
   #fs-scroll-wheel {
     width: 80%;
   }
+
+  .popup-content {
+    width: 80vw;
+    font-size: clamp(12px, 3vw, 24px);
+  }
+
 }
 
 
@@ -164,5 +183,10 @@
 
   #fs-scroll-wheel button {
     font-size: 5vw;
+  }
+
+  .popup-content {
+    width: 90vw;
+    font-size: clamp(12px, 5vw, 20px);
   }
 }

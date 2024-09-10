@@ -1,9 +1,7 @@
-
-
 const button_descriptions = {
-    week1 : 'For the first week, we’d start with an introduction about what the club is, and icebreaker activities to get to know each other better. We’d provide an overview of the club and the kind of curriculum we’d be teaching for the semester. Also, get feedback on how long the club should be and introduce officer roles for auditioning the following week.',
+    week1 : "For the first week, we’d start with an introduction about what the club is, and icebreaker activities to get to know each other better. We’d provide an overview of the club and the kind of curriculum we’d be teaching for the semester. Also, get feedback on how long the club should be and introduce officer roles for auditioning the following week.",
 
-    week2 : "We’d use Python to start (and accommodate to those who use other languages) with how to how have a programmers mind and how to think critically when looking at problems/challenges. We’d have simple sample problems to showcase how to use code to solve them and encourage thinking-out-loud behavior to improve critical thought.This week we’d elect officers and assign roles accordingly",
+    week2 : "We’d use Python to start (and accommodate to those who use other languages) with how to how have a programmers mind and how to think critically when looking at problems/challenges. We’d have simple sample problems to showcase how to use code to solve them and encourage thinking-out-loud behavior to improve critical thought.This week we’d elect officers and assign roles accordingly <a href='https://docs.google.com/document/d/18TmDfoJ5w91f_QYIKmuBhb-cZP8_UTGaJajzyzX6HSA/edit?usp=sharing' target='_blank'>Google Doc for Week 2</a>",
 
     week3 : "Learn the basics of version control with Git, and showcase what Github is and how to use it. Learn how to create and share repositories on GitHub. We’d build a sample repository for the members to fork and commit a welcome message for themselves.",
 
@@ -30,6 +28,9 @@ const button_descriptions = {
     week14 : "The members will present their final portfolio / personal projects. We’d have an end-of-year party.",
 };
 
+const link = "www.google.com";
+
+
 // Get the pop-up element
 const popup = document.getElementById('popup');
 
@@ -38,7 +39,7 @@ const closeButton = document.querySelector('.close-button');
 
 // Function to show the pop-up with a custom message
 function showPopup(message) {
-    document.getElementById('popup-message').textContent = message;
+    document.getElementById('popup-message').innerHTML = message;
     popup.style.display = 'block';
 }
 

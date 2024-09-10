@@ -46,7 +46,7 @@ hr {
   text-decoration: none;
   font-size: clamp(8px, 2vw, 18px);
   font-weight: bold;
-  color: black; 
+  color: black;
 }
 
 .staff-image-container a:hover {
@@ -112,7 +112,6 @@ hr {
   color: black;
 }
 
-
 /* For mobile use */
 .officer-mobile {
   display: none;
@@ -129,11 +128,8 @@ hr {
   margin-bottom: 40px;
 }
 
-
-
 /* Landscape Design */
 @media screen and (max-width: 1024px) {
-  
   #vice-pres a {
     left: -2vw;
   }
@@ -143,8 +139,6 @@ hr {
     width: 30vw;
   }
 }
-
-
 
 /* Tablet Design */
 @media screen and (max-width: 768px) {
