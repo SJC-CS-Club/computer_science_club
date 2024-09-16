@@ -13,13 +13,19 @@ header {
   height: 10vh;
 }
 
-header h1 {
+.see-more-h1 {
   background: linear-gradient(90deg, #e770ff, #ffbf60, #5cbeff);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
   color: transparent;
-  font-size: 60px;
+  width: 100%;
+  height: 100%;
+  font-size: clamp(30px, 3vw, 45px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 
 /* General styling for all screen sizes */
@@ -36,52 +42,123 @@ header h1 {
 .officer {
   background-color: white;
   display: flex;
-  flex-direction: column;
-  padding: 20px;
+  flex-direction: row;
+  padding: 10px;
   text-align: center;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  width: 20vw;
-  height: 70vh;
+  width: 35vw;
+  height: 85vh;
 }
-/*  */
+
+.officer-inner-left {
+  width: 60%;
+}
+
 .officer h2 {
   height: 10%;
   display: flex;
   justify-content: center;
   align-items: center;
+  font-size: clamp(24px, 2vw, 30px);
+}
+
+.officer h3 {
+  height: 5%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  font-size: clamp(18px, 2vw, 20px);
+}
+
+.officer figure {
+  height: 85%;
+  background-position: center;
+  background-size: cover;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  border-radius: 5px;
 }
 
 .officer p {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 15%;
   padding: 5px;
+  height: 100%;
+  width: 40%;
 }
 
-.officer figure {
-  background-image: url("/images/staff-image-three.jpg");
-  height: 70%;
-  background-position: center;
-  background-size: cover;
+.officer-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5%;
 }
 
-.officer h3 {
-  height: 5%;
+
+.president {
+  background-image: url("/images/president.jpg");
 }
 
+.vice-president {
+  background-image: url("/images/derrick.png");
+}
+
+.secretary {
+  background-image: url("/images/derrick.png");
+}
+
+.sga {
+  background-image: url("/images/derrick.png");
+}
+
+.treasurer {
+  background-image: url("/images/derrick.png");
+}
+
+.social {
+  background-image: url("/images/derrick.png");
+}
 
 /* Responsive Design */
 @media (max-width: 1024px) {
-  .officer {
-    width: 40vw;
+  header {
+    height: 15vh;
   }
+  
+  .officer-wrapper {
+    height: auto;
+    gap: 5%;
+  }
+
+  .officer {
+    width: 60vw;
+  }
+
+  .see-more-h1 {
+    padding: 5%;
+  }
+
+  #president {
+    width: 50vw;
+  }
+
+  #vice-president {
+    width: 50vw;
+  }
+
 }
 
 @media (max-width: 768px) {
   .officer {
     width: 90vw;
+    height: 100vh;
+    gap: 10px;
+  }
+
+  .see-more-h1 {
+    padding: 5%;
   }
 
   #officers {
@@ -92,7 +169,63 @@ header h1 {
     flex-direction: column;
     height: auto;
   }
+
+  .officer-wrapper {
+    flex-direction: column;
+  }
+
+  #president {
+    margin: 5% auto;
+    width: 80vw;
+  }
+
+  #vice-president {
+    width: 80vw;
+  }
+
+  .officer {
+    width: 80vw;
+    height: 100vh;
+  }
+
+  .officer h2 {
+    font-size: clamp(24px, 5vw, 38px);
+  }
+
+  .officer h3 {
+    font-size: clamp(18px, 4vw, 24px);
+  }
+
 }
+
+
+@media screen and (max-width: 468px) {
+  .officer {
+    height: 140vh;
+    width: 90vw;
+    flex-direction: column;
+  }
+
+  .officer h2 {
+    font-size: clamp(24px, 8.5vw, 50px);    
+  }
+
+  .officer-wrapper {
+    width: 100vw;
+  }
+
+  .officer-inner-left {
+    height: 70%;
+    width: 100%;
+  }
+
+  
+  .officer p {
+    height: 30%;
+    width: 100%;
+  }
+}
+
 
 /* Animated background */
 @keyframes move {

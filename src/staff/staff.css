@@ -29,7 +29,7 @@ hr {
 }
 
 #pres {
-  background-image: url("/images/president.jpg");
+  background-image: url("/images/president-two.jpg");
   background-position: center;
   background-size: cover;
   position: relative;
@@ -95,6 +95,7 @@ hr {
   flex-direction: column;
   gap: 15px;
 }
+
 .see-more {
   position: absolute;
   top: 5%;
