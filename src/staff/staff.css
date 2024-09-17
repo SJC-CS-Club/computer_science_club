@@ -112,6 +112,12 @@ hr {
   color: black;
 }
 
+.see-more:hover {
+  text-shadow: 0 0 4px gray;
+  letter-spacing: 0.04em;
+  transition: all 0.1s ease;
+}
+
 /* For mobile use */
 .officer-mobile {
   display: none;
