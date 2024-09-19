@@ -10,7 +10,7 @@
   justify-content: center;
   align-items: flex-start;
   flex-direction: column;
-  gap: 5%;
+  gap: 2vh;
 }
 
 .info-left h1 {
@@ -25,7 +25,7 @@
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
-  font-size: clamp(8px, 2vw, 24px);
+  font-size: clamp(16px, 2vw, 24px);
   padding-left: 5%;
 }
 
@@ -65,20 +65,18 @@
   text-overflow: ellipsis;
 }
 
-.info-box h3 a {
-  color: blue; 
-  text-decoration: none; 
-  font-weight: bold;
-  white-space: nowrap; 
+
+@media screen and (max-width: 1024px) {
+  .info-left h1 {
+    font-size: clamp(32px, 4vw, 48px);
+  }  
+
 }
 
-.info-box h3 a:hover {
-  text-decoration: underline;
-}
-
-.info-box h3 span {
-  display: inline; 
-  font-weight: normal;
+@media screen and (max-height: 600px) {
+  .info-left p {
+    font-size: clamp(16px, 2vh, 24px);
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -99,6 +97,10 @@
   .info-left h3 {
     font-size: clamp(8px, 3vw, 24px);
     padding-right: 5%;
+  }
+
+  .info-left p {
+    font-size: clamp(16px, 2.5vw, 24px);
   }
 
   .info-right {
@@ -134,7 +136,7 @@
   }
 
   .info-box h3 {
-    height: 50%;
-    font-size: clamp(14px, 4vw, 28px);
+    height: auto;
+    font-size: clamp(18px, 4vw, 34px);
   }
 }

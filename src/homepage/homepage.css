@@ -97,5 +97,7 @@ header #buttons {
 
 /* Mobile Design */
 @media screen and (max-width: 480px) {
-  
+  #headline h1 {
+    font-size: clamp(40px, 6vw, 100px);
+  }
 }
