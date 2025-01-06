@@ -1,6 +1,9 @@
 import { Nav } from "./components/nav";
 import { Home } from "./pages/home";
 import { Stats } from "./components/stats";
+import { Announce } from "./components/anouncements";
+import { Staff } from "./components/staff";
+import { Schedule } from "./components/schedule";
 
 function App() {
   return (
@@ -8,6 +11,9 @@ function App() {
       <Nav />
       <Home />
       <Stats />
+      <Announce />
+      <Staff />
+      <Schedule />
     </>
   );
 }
