@@ -1,3 +1,5 @@
+import "../styles/homepage.scss";
+
 export const Home = () => {
   return (
     <header>
@@ -5,7 +7,7 @@ export const Home = () => {
       <div id="headline">
         <h1>
           Computer Science
-          <span class="gradient">
+          <span className="gradient">
             <br />
             Club
           </span>

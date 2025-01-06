@@ -1,0 +1,95 @@
+header {
+  position: relative;
+
+  figure {
+    background-position: center;
+    background-image: url("../assets/images/main-banner-2.jpg");
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+    position: relative;
+  }
+  #headline {
+    position: absolute;
+    top: 13%;
+    width: 100%;
+
+    h1 {
+      font-family: "Courier New", Courier, monospace;
+      font-weight: 100;
+      letter-spacing: 12px;
+      font-size: clamp(50px, 6vw, 100px);
+      color: snow;
+      text-align: center;
+      margin: 0 auto;
+      text-shadow: 0 0 4px gray;
+      width: 90%;
+    }
+
+    .gradient {
+      background: linear-gradient(45deg, #e770ff, #ffbf60, #5cbeff);
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-shadow: none;
+    }
+  }
+
+  #buttons {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    bottom: 10%;
+    width: 100%;
+    height: 90px;
+    border-radius: 10px;
+
+    button {
+      margin: 0 30px;
+      width: 200px;
+      font-size: 24px;
+      border-radius: 10px;
+    }
+    button:hover {
+      cursor: pointer;
+      border: 2px solid transparent;
+    }
+    #join-us {
+      background-color: snow;
+      color: black;
+    }
+
+    #join-us a {
+      color: black;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    #join-us:hover {
+      background: linear-gradient(snow, snow) padding-box,
+        linear-gradient(45deg, #e770ff, #ffbf60, #5cbeff) border-box;
+    }
+
+    #learn-more {
+      background: black;
+      color: snow;
+    }
+
+    #learn-more a {
+      color: snow;
+    }
+
+    #learn-more:hover {
+      background: linear-gradient(black, black) padding-box,
+        linear-gradient(45deg, #e770ff, #ffbf60, #5cbeff) border-box;
+    }
+  }
+}
+
+/* Mobile Design */
+@media screen and (max-width: 480px) {
+  #headline h1 {
+    font-size: clamp(40px, 6vw, 100px);
+  }
+}
