@@ -4,6 +4,7 @@ import { Stats } from "./components/stats";
 import { Announce } from "./components/anouncements";
 import { Staff } from "./components/staff";
 import { Schedule } from "./components/schedule";
+import { Location } from "./components/location";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
       <Announce />
       <Staff />
       <Schedule />
+      <Location />
     </>
   );
 }
