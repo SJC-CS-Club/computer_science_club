@@ -1,5 +1,8 @@
+@use "./plug" as p;
+
 #staff-container {
   width: 100%;
+  border: 1px solid red;
 
   .staff-image-container {
     width: 100%;
@@ -9,55 +12,64 @@
     justify-content: space-around;
     align-items: center;
 
-    figure {
-      width: 25vw;
-      height: 65vh;
-      border: 1px solid black;
-      border-radius: 5px;
+    .staff {
+      // border: 2px solid red;
+      width: 25%;
+      position: relative;
+
+      h2 {
+        border: 1px solid red;
+        width: 100%;
+        position: absolute;
+        top: -1rem;
+        text-align: center;
+        font-family: "Playwrite US Modern";
+        letter-spacing: 1px;
+        font-weight: 400;
+      }
+
+      figure {
+        width: 100%;
+        height: auto;
+        // border: 5px solid red;
+
+        img {
+          object-fit: contain;
+          width: 100%;
+          height: 100%;
+        }
+      }
+
+      a {
+        width: 100%;
+        position: absolute;
+        bottom: -1.5rem;
+        text-align: center;
+        letter-spacing: 0.5px;
+        display: block;
+        text-decoration: none;
+        font-size: clamp(p.rem(10px), 2vw, p.rem(18px));
+        font-weight: bold;
+        color: black;
+        border: 1px solid red;
+        word-break: break-all;
+      }
+      a:hover {
+        text-shadow: 0 0 4px gray;
+        letter-spacing: 0.04em;
+        transition: all 0.1s ease;
+      }
     }
   }
+}
+
+.president {
+  transform: scale(1.1);
 }
 
 hr {
   width: 60vw;
   margin: 0 auto;
-}
-
-#pres {
-  background-image: url("../../public/assets/images/compsci-logo.png");
-  background-position: center;
-  background-size: cover;
-  position: relative;
-  box-shadow: -4px 8px 8px gray;
-}
-
-.staff-image-container a {
-  width: 100%;
-  position: absolute;
-  bottom: -40px;
-  text-align: center;
-  letter-spacing: 0.5px;
-  display: block;
-  text-decoration: none;
-  font-size: clamp(8px, 2vw, 18px);
-  font-weight: bold;
-  color: black;
-}
-
-.staff-image-container a:hover {
-  text-shadow: 0 0 4px gray;
-  letter-spacing: 0.04em;
-  transition: all 0.1s ease;
-}
-
-.staff-image-container h2 {
-  width: 100%;
-  position: absolute;
-  top: -45px;
-  text-align: center;
-  font-family: "Playwrite US Modern";
-  letter-spacing: 1px;
-  font-weight: 400;
 }
 
 #vice-pres,
@@ -73,13 +85,7 @@ hr {
   box-shadow: 0 8px 8px gray;
 }
 
-#sponsor {
-  background-image: url("../../public/assets/images/compsci-logo.png");
-  background-position: center;
-  background-size: cover;
-  position: relative;
-  box-shadow: 0 8px 8px gray;
-}
+// Officer Section
 
 .officer-section {
   height: 15vh;
@@ -129,130 +135,36 @@ hr {
   margin-bottom: 40px;
 }
 
-/* Landscape Design */
-@media screen and (max-width: 1024px) {
-  #vice-pres a {
-    left: -2vw;
-  }
-
-  .staff-image-container figure {
-    height: 60vh;
-    width: 30vw;
-  }
-}
-
-/* Tablet Design */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: p.rem(768px)) {
   #staff-container {
-    height: 300vh;
-  }
+    .staff-image-container {
+      border: 5px solid purple;
+      flex-direction: column;
+      gap: 2rem;
 
-  #vice-pres a {
-    left: -3vw;
-  }
+      .staff {
+        margin: 3rem;
+        width: 65%;
+      }
+    }
 
-  .staff-image-container {
-    flex-direction: column;
-    height: 90%;
-  }
+    .officer-section {
+      display: flex;
+      height: auto;
+      padding-bottom: 1rem;
 
-  .staff-image-container a {
-    font-size: clamp(8px, 4vw, 20px);
-  }
+      #staff-officer-names {
+        display: none;
+      }
+    }
+    #staff-officer-title {
+      font-size: 3.5rem;
+    }
 
-  .staff-image-container figure {
-    width: 60vw;
-    height: 80vh;
-    margin: 40px auto;
-  }
-
-  .staff-image-container h2 {
-    font-size: 20px;
-  }
-
-  .officer-section {
-    height: 10%;
-    padding: 20px;
-  }
-}
-
-/* Mobile Design */
-@media screen and (max-width: 480px) {
-  #staff-container {
-    height: 280vh;
-  }
-
-  #vice-pres a {
-    left: -7vw;
-  }
-
-  .staff-image-container {
-    flex-direction: column;
-    height: 80%;
-    gap: 70px;
-    position: relative;
-  }
-
-  .staff-image-container figure {
-    width: 80vw;
-    height: 60vh;
-    margin: 10px 0;
-  }
-
-  .staff-image-container h3,
-  .staff-image-container h2 {
-    font-size: 14px;
-  }
-
-  :is(#vice-pres h2, #sponsor h2) {
-    font-size: 4.5vw;
-  }
-
-  :is(#vice-pres a, #sponsor a) {
-    font-size: 5vw;
-  }
-
-  #pres h2 {
-    font-size: 5.5vw;
-  }
-
-  #pres a {
-    font-size: 5vw;
-  }
-
-  hr {
-    display: none;
-  }
-
-  .officer-section {
-    height: 20%;
-    position: relative;
-    gap: 20px;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    padding: 30px;
-  }
-
-  .officer-section::before {
-    content: "";
-    width: 80%;
-    border: 1px solid black;
-    border-radius: 50%;
-    position: absolute;
-    top: 0;
-  }
-
-  #staff-officer-title {
-    font-size: 10vw;
-  }
-
-  #staff-officer-names {
-    display: none;
-  }
-
-  .officer-mobile {
-    display: block;
-    font-size: 4.5vw;
+    .officer-mobile {
+      display: flex;
+      padding: 0.5rem;
+      font-size: 1.75rem;
+    }
   }
 }

@@ -1,37 +1,48 @@
 import "../styles/staff.scss";
-
+import logo from "/assets/images/compsci-logo.png";
 
 let staff = {
   Nate: {
     role: "President",
-    email: "example@stu.sanjac.edu"
+    email: "example@stu.sanjac.edu",
+    image: "string",
   },
   Derrick: {
     role: "Vice President",
-    email: "example@stu.sanjac.edu"
+    email: "example@stu.sanjac.edu",
   },
   Sponsor: {
     role: "Sponsor",
-    email: "eample@stu.sanjac.edu"
-  }
-}
+    email: "eample@stu.sanjac.edu",
+  },
+};
+console.log(23);
 
 export const Staff = () => {
   return (
     <section id="staff-container">
       <div className="staff-image-container">
-        <figure id="vice-pres">
-          <a href="#">example@stu.sanjac.edu</a>
+        <div className="staff">
           <h2>VICE PRESIDENT</h2>
-        </figure>
-        <figure id="pres">
+          <figure id="vice-pres">
+            <img src={logo} alt="" />
+          </figure>
           <a href="#">example@stu.sanjac.edu</a>
+        </div>
+        <div className="staff president">
           <h2>PRESIDENT</h2>
-        </figure>
-        <figure id="sponsor">
+          <figure id="vice-pres">
+            <img src={logo} alt="" />
+          </figure>
           <a href="#">example@stu.sanjac.edu</a>
+        </div>
+        <div className="staff">
           <h2>SPONSOR</h2>
-        </figure>
+          <figure id="vice-pres">
+            <img src={logo} alt="" />
+          </figure>
+          <a href="#">example@stu.sanjac.edu</a>
+        </div>
       </div>
       <hr />
       <StaffOfficers />
@@ -47,16 +58,16 @@ export const StaffOfficers = () => {
       </a>
       <h1 id="staff-officer-title">Officers</h1>
       <h3 id="staff-officer-names">
-        "Vacant" · President | "Vacant" · Vice President | "Vacant" · SGA |
-        "Vacant" · Secretary | "Vacant" · Treasurer | "Vacant" · Social
+        Vacant · President | Vacant · Vice President | Vacant · SGA | Vacant ·
+        Secretary | Vacant · Treasurer | Vacant · Social
       </h3>
 
-      <h3 className="officer-mobile">"Vacant" · President</h3>
-      <h3 className="officer-mobile">"Vacant" · Vice President</h3>
-      <h3 className="officer-mobile">"Vacant" · Secretary</h3>
-      <h3 className="officer-mobile">"Vacant" · SGA</h3>
-      <h3 className="officer-mobile">"Vacant" · Treasurer</h3>
-      <h3 className="officer-mobile">"Vacant" · Social</h3>
+      <h3 className="officer-mobile"> President · Vacant</h3>
+      <h3 className="officer-mobile"> Vice President · Vacant</h3>
+      <h3 className="officer-mobile"> SGA · Vacant</h3>
+      <h3 className="officer-mobile"> Treasurer · Vacant</h3>
+      <h3 className="officer-mobile"> Social · Vacant</h3>
+      <h3 className="officer-mobile"> Secretary · Vacant</h3>
     </div>
   );
 };

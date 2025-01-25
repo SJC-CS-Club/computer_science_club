@@ -15,7 +15,7 @@ function App() {
       <Home />
       <Stats />
       <Announce />
-      {/* <Staff /> */}
+      <Staff />
       {/* <Schedule /> */}
       {/* <Location /> */}
       {/* <Feedback /> */}
