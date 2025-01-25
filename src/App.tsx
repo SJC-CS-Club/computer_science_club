@@ -15,11 +15,11 @@ function App() {
       <Home />
       <Stats />
       <Announce />
-      <Staff />
-      <Schedule />
-      <Location />
-      <Feedback />
-      <Footer />
+      {/* <Staff /> */}
+      {/* <Schedule /> */}
+      {/* <Location /> */}
+      {/* <Feedback /> */}
+      {/* <Footer /> */}
     </>
   );
 }

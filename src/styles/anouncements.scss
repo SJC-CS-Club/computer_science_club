@@ -2,67 +2,66 @@
   height: 50vh;
   display: flex;
   background-color: lightgray;
-}
 
-.info-left {
-  width: 40%;
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  flex-direction: column;
-  gap: 2vh;
-}
+  .info-left {
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 2vh;
 
-.info-left h1 {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  font-size: clamp(20px, 3vw, 48px);
-  padding-left: 5%;
-}
+    h1 {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      font-size: clamp(20px, 3vw, 48px);
+      padding-left: 5%;
+    }
+    p {
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-start;
+      font-size: clamp(16px, 2vw, 24px);
+      padding-left: 5%;
+    }
+  }
 
-.info-left p {
-  display: flex;
-  justify-content: flex-start;
-  align-items: flex-start;
-  font-size: clamp(16px, 2vw, 24px);
-  padding-left: 5%;
-}
+  .info-right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60%;
 
-.info-right {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 60%;
-}
+    .info-box {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+      border: none;
+      height: 80%;
+      width: 85%;
+      overflow-y: scroll;
+      background-color: gray;
+      border: 1px solid black;
 
-.info-box {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
-  border: none;
-  height: 80%;
-  width: 85%;
-  overflow-y: scroll;
-  background-color: gray;
-  border: 1px solid black;
-}
-
-.info-box h3 {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  width: 100%;
-  height: auto;
-  flex-shrink: 0;
-  background-color: snow;
-  border-bottom: 1px solid black;
-  padding: 20px;
-  font-size: clamp(14px, 2vw, 18px);
-  line-height: 1.2;
-  word-wrap: break-word;
-  text-overflow: ellipsis;
+      h3 {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        width: 100%;
+        height: auto;
+        flex-shrink: 0;
+        background-color: snow;
+        border-bottom: 1px solid black;
+        padding: 20px;
+        font-size: clamp(14px, 2vw, 18px);
+        line-height: 1.2;
+        word-wrap: break-word;
+        text-overflow: ellipsis;
+      }
+    }
+  }
 }
 
 @media screen and (max-width: 1024px) {
