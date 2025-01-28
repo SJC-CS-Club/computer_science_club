@@ -16,7 +16,6 @@ let staff = {
     email: "eample@stu.sanjac.edu",
   },
 };
-console.log(23);
 
 export const Staff = () => {
   return (

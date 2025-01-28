@@ -1,115 +1,76 @@
-#feedback-section {
-  height: 40vh;
+@use "./plug" as p;
+
+.feedback-section {
   display: flex;
   background-color: #8c919a;
-}
 
-.feedback-left {
-  width: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  flex-direction: column;
-  gap: 10px;
-}
+  .feedback-left {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 10px;
+    padding: 2.5rem 1rem;
 
-.feedback-left h1,
-.feedback-left p {
-  margin-left: 10%;
-}
+    :is(h1, p) {
+      margin-left: 10%;
+    }
+    h1 {
+      font-size: 3rem;
+    }
+    p {
+      font-size: clamp(1rem, 2vw, 1.5rem);
+      width: 80%;
+    }
+  }
 
-.feedback-left h1 {
-  font-size: var(--header-size-normal);
-}
+  .feedback-right {
+    width: 50%;
 
-.feedback-left p {
-  font-size: clamp(12px, 2vw, 24px);
-  width: 80%;
-}
+    form {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
 
-.feedback-right {
-  width: 50%;
-}
+      #feedback {
+        height: 90%;
+        width: 70%;
+        margin-top: 1.25rem;
+        padding: 0.75rem;
+        border: 1px solid black;
+        border-radius: 5px;
+        font-size: 1rem;
+      }
 
-.feedback-right form {
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
-#feedback {
-  height: 80%;
-  width: 50%;
-  margin-top: 20px;
-  padding: 10px;
-  border: 1px solid black;
-  border-radius: 5px;
-  font-size: 16px;
-}
-
-.feedback-right form input[type="submit"] {
-  margin-bottom: 20px;
-  width: 200px;
-  height: 50px;
-  border-radius: 5px;
-  border: none;
-  font-weight: bold;
+      input[type="submit"] {
+        margin-bottom: 1.25rem;
+        width: p.rem(200px);
+        height: 50px;
+        border-radius: 0.5rem;
+        border: none;
+        font-weight: bold;
+      }
+    }
+  }
 }
 
 span {
   color: rgb(183, 11, 11);
 }
 
-@media screen and (max-width: 768px) {
-  #feedback {
-    width: 80%;
-  }
-
-  .feedback-left h1 {
-    font-size: var(--header-size-768);
-  }
-
-  .feedback-left p {
-    width: 90%;
-  }
-}
-
-/* Mobile Design */
-@media screen and (max-width: 480px) {
-  #feedback-section {
+@media screen and (max-width: p.rem(768px)) {
+  .feedback-section {
+    width: 100%;
     flex-direction: column;
-    height: 100vh;
-  }
 
-  .feedback-left {
-    width: 100%;
-    height: 50%;
-    align-items: flex-start;
-    justify-content: center;
-  }
-
-  .feedback-left h1 {
-    font-size: var(--header-size-480);
-  }
-
-  .feedback-left p {
-    font-size: 4.5vw;
-    width: 80%;
-  }
-
-  .feedback-right {
-    width: 100%;
-    height: 50%;
-  }
-
-  #feedback {
-    width: 80%;
-  }
-
-  .feedback-right form input[type="submit"] {
-    width: 50%;
-    font-size: 18px;
+    .feedback-left {
+      width: 100%;
+    }
+    .feedback-right {
+      width: 100%;
+    }
   }
 }

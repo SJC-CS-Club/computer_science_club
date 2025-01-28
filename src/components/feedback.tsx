@@ -2,7 +2,7 @@ import "../styles/feedback.scss";
 
 export const Feedback = () => {
   return (
-    <section id="feedback-section">
+    <section className="feedback-section">
       <div className="feedback-left">
         <h1>Feedback</h1>
         <p>
@@ -10,7 +10,7 @@ export const Feedback = () => {
           students!
           <span className="feedback-span">
             (This section is currently under construction and won't work as
-            intended. Check back soon!)
+            intended. Or fix it yourself, y'all are developers. Help a club out. -Nate )
           </span>
         </p>
       </div>

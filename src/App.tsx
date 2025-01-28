@@ -18,8 +18,8 @@ function App() {
       <Staff />
       <Schedule />
       <Location />
-      {/* <Feedback /> */}
-      {/* <Footer /> */}
+      <Feedback />
+      <Footer />
     </>
   );
 }
