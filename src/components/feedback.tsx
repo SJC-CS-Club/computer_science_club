@@ -10,7 +10,7 @@ export const Feedback = () => {
           students!
           <span className="feedback-span">
             (This section is currently under construction and won't work as
-            intended. Or fix it yourself, y'all are developers. Help a club out. -Nate )
+            intended. Or fix it yourself, y'all are developers. Help a club out. - Nate )
           </span>
         </p>
       </div>
