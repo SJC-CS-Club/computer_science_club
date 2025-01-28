@@ -2,7 +2,6 @@
 
 #staff-container {
   width: 100%;
-  border: 1px solid red;
 
   .staff-image-container {
     width: 100%;
@@ -13,12 +12,10 @@
     align-items: center;
 
     .staff {
-      // border: 2px solid red;
       width: 25%;
       position: relative;
 
       h2 {
-        border: 1px solid red;
         width: 100%;
         position: absolute;
         top: -1rem;
@@ -31,7 +28,6 @@
       figure {
         width: 100%;
         height: auto;
-        // border: 5px solid red;
 
         img {
           object-fit: contain;
@@ -51,11 +47,9 @@
         font-size: clamp(p.rem(10px), 2vw, p.rem(18px));
         font-weight: bold;
         color: black;
-        border: 1px solid red;
         word-break: break-all;
       }
       a:hover {
-        text-shadow: 0 0 4px gray;
         letter-spacing: 0.04em;
         transition: all 0.1s ease;
       }
@@ -138,7 +132,6 @@ hr {
 @media screen and (max-width: p.rem(768px)) {
   #staff-container {
     .staff-image-container {
-      border: 5px solid purple;
       flex-direction: column;
       gap: 2rem;
 

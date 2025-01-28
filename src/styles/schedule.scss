@@ -1,71 +1,69 @@
+@use "./plug" as p;
+
 #fall-schedule {
-  height: 60vh;
+  // height: 60vh;
   width: 100%;
   display: flex;
   background-color: lightgray;
-}
 
-.fall-schedule-left {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  gap: 20px;
-  padding-left: 60px;
-  width: 70%;
-}
+  .fall-schedule-left {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding-left: 3rem;
+    width: 70%;
 
-.fall-schedule-left h1 {
-  font-size: var(--header-size-normal);
-  width: 100%;
-}
+    h1 {
+      font-size: clamp(p.rem(24px), 3rem, p.rem(42px));
+      width: 100%;
+    }
+    p {
+      font-size: clamp(p.rem(20px), 2rem, p.rem(24px));
+      width: 100%;
+    }
+  }
 
-.fall-schedule-left p {
-  font-size: clamp(20px, 2vw, 24px);
-  width: 100%;
-}
+  .fall-schedule-right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    gap: 40px;
+    padding: 2rem;
 
-.fall-schedule-right {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  width: 100%;
-  gap: 40px;
-}
+    #fall-agenda {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 10%;
+      font-size: 32px;
+      width: 70%;
+      font-weight: bold;
+      border-bottom: 1px solid black;
+    }
+    .fs-scroll-wheel {
+      display: flex;
+      overflow: scroll;
+      overflow-x: hidden;
+      flex-direction: column;
+      width: 80%;
+      height: p.rem(300px);
 
-#fall-agenda {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 10%;
-  font-size: 32px;
-  font-weight: bold;
-  border-bottom: 1px solid black;
-}
-
-.fall-schedule-right-inner {
-  width: 70%;
-}
-
-#fs-scroll-wheel {
-  display: flex;
-  overflow: scroll;
-  overflow-x: hidden;
-  flex-direction: column;
-  width: 70%;
-  height: 300px;
-}
-
-#fs-scroll-wheel button {
-  height: 100px;
-  width: 100%;
-  font-size: 24px;
-  display: block;
-  flex-shrink: 0;
-  text-align: left;
-  padding-left: 20px;
-  cursor: pointer;
+      button {
+        height: auto;
+        width: 100%;
+        font-size: 1.5rem;
+        display: block;
+        flex-shrink: 0;
+        text-align: left;
+        padding: 1rem 1.25rem;
+        cursor: pointer;
+      }
+    }
+  }
 }
 
 /* Popup Section for the button */
@@ -113,22 +111,21 @@
 }
 
 /* Tablet Design */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: p.rem(768px)) {
   #fall-schedule {
     flex-direction: column;
-    height: 100vh;
-  }
 
-  .fall-schedule-left {
-    height: 35%;
-    width: 100%;
-    padding-left: 20px;
-  }
+    .fall-schedule-left {
+      width: 100%;
+      padding-top: 1.5rem;
 
-  .fall-schedule-left h1 {
-    text-align: center;
-    padding-right: 45px;
-    font-size: var(--header-size-768);
+      h1 {
+        text-align: left;
+      }
+      p {
+        text-align: left;
+      }
+    }
   }
 
   .fall-schedule-left p {
@@ -145,45 +142,12 @@
     width: 80%;
   }
 
-  #fs-scroll-wheel {
-    width: 80%;
+  .fs-scroll-wheel {
+    width: 90%;
   }
 
   .popup-content {
     width: 80vw;
     font-size: clamp(12px, 3vw, 24px);
-  }
-}
-
-/* Mobile Design */
-@media screen and (max-width: 480px) {
-  #fall-schedule {
-    height: 100vh;
-  }
-
-  .fall-schedule-left {
-    height: 40%;
-  }
-
-  .fall-schedule-left h1 {
-    font-size: var(--header-size-480);
-  }
-
-  .fall-schedule-left p {
-    height: 70%;
-    font-size: clamp(8px, 6vw, 24px);
-  }
-
-  .fall-schedule-right {
-    height: 60%;
-  }
-
-  #fs-scroll-wheel button {
-    font-size: 5vw;
-  }
-
-  .popup-content {
-    width: 90vw;
-    font-size: clamp(12px, 5vw, 20px);
   }
 }
