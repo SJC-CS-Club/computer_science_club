@@ -17,7 +17,7 @@ function App() {
       <Announce />
       <Staff />
       <Schedule />
-      {/* <Location /> */}
+      <Location />
       {/* <Feedback /> */}
       {/* <Footer /> */}
     </>
