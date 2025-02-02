@@ -7,6 +7,7 @@ import { Schedule } from "./components/schedule";
 import { Location } from "./components/location";
 import { Feedback } from "./components/feedback";
 import { Footer } from "./components/footer";
+import Gallery from "./components/gallery";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
       <Nav />
       <Home />
       <Stats />
+      <Gallery />
       <Announce />
       <Staff />
       <Schedule />

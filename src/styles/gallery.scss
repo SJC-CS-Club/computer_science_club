@@ -1,0 +1,118 @@
+@use "./plug" as p;
+
+#gallery-page {
+  // border: 1px solid red;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  h1 {
+    padding-top: 2rem;
+    font-size: 3rem;
+    width: 100%;
+    text-align: center;
+  }
+  p {
+    font-size: 20px;
+  }
+
+  .carousel {
+    position: relative;
+    // border: 1px solid red;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    max-height: 1200px;
+    width: 80%;
+    border-radius: 12px;
+    overflow: hidden;
+    position: relative;
+    // box-shadow: p.$boxShadow;
+    margin-bottom: 4rem;
+
+    .carousel-track-wrapper {
+      width: 100%;
+      overflow: hidden; // Ensure only visible slides show
+      border-radius: 12px;
+    }
+
+    .carousel-track {
+      display: flex;
+      transition: transform 0.5s ease-in-out; // Smooth sliding animation
+      width: 100%;
+    }
+
+    .carousel-image-wrapper {
+      flex: 0 0 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      height: auto;
+    }
+
+    .carousel-image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .carousel-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    // color: p.$support-color;
+    background: none;
+    border: none;
+    font-size: 4rem;
+    cursor: pointer;
+    z-index: 10;
+  }
+
+  .carousel-button.prev {
+    left: 10px;
+  }
+
+  .carousel-button.next {
+    right: 10px;
+  }
+
+  .carousel-dots {
+    position: absolute;
+    bottom: 2rem;
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+  }
+
+  .dot {
+    width: 12px;
+    height: 12px;
+    background-color: gray;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+
+  .dot.active {
+    background-color: white;
+  }
+}
+
+@media screen and (max-width: 678px) {
+  #gallery-page {
+    // border: 1px solid red;
+
+    h1 {
+      font-size: clamp(32px, 8vw, 60px);
+    }
+    p {
+      text-align: center;
+      padding: 1rem;
+    }
+  }
+}
