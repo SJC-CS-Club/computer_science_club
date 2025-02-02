@@ -1,7 +1,6 @@
 @use "./plug" as p;
 
 #gallery-page {
-  border: 2px solid red;
   height: auto;
   display: flex;
   justify-content: center;
@@ -13,36 +12,39 @@
     font-size: 3rem;
     width: 100%;
     text-align: center;
+    // border: 1px solid red;
   }
   p {
-    font-size: 20px;
+    font-size: 1.5rem;
+    padding: 0.5rem;
+    width: 100%;
+    text-align: center;
   }
 
   .carousel {
     position: relative;
-    // border: 1px solid red;
     overflow: hidden;
     display: flex;
     justify-content: center;
     align-items: center;
     height: auto;
-    max-height: 1200px;
     width: 80%;
+    max-width: 850px;
     border-radius: 12px;
     overflow: hidden;
     position: relative;
-    // box-shadow: p.$boxShadow;
+    box-shadow: 0 8px 8px gray;
     margin-bottom: 4rem;
 
     .carousel-track-wrapper {
       width: 100%;
-      overflow: hidden; // Ensure only visible slides show
-      border-radius: 12px;
+      overflow: hidden;
+      border-radius: 0.75rem;
     }
 
     .carousel-track {
       display: flex;
-      transition: transform 0.5s ease-in-out; // Smooth sliding animation
+      transition: transform 0.5s ease-in-out; 
       width: 100%;
     }
 
