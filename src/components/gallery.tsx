@@ -5,6 +5,15 @@ import carouselImageEight from "/assets/images/carousel-image-eight.png";
 import carouselImageNine from "/assets/images/carousel-image-nine.png";
 import carouselImageSeven from "/assets/images/carousel-image-seven.png";
 import carouselImageThirteen from "/assets/images/carousel-image-thirteen.png";
+import carouselImageTwelve from "/assets/images/carousel-image-twelve.png";
+import carouselImageFour from "/assets/images/carousel-image-four.jpg";
+import bannerImageOne from "/assets/images/banner-image-one.jpg";
+import bannerImageTwo from "/assets/images/banner-image-two.jpg";
+import bannerImageThree from "/assets/images/banner-image-three.jpg";
+import bannerImageFour from "/assets/images/banner-image-four.jpg";
+import bannerImageFive from "/assets/images/banner-image-five.jpg";
+import imageFour from "/assets/images/week-4-one.jpg";
+import imageFive from "/assets/images/week-4-two.jpg";
 
 
 
@@ -86,7 +95,16 @@ const Gallery: React.FC = () => {
     carouselImageEight,
     carouselImageNine,
     carouselImageSeven,
-    carouselImageThirteen
+    carouselImageThirteen,
+    carouselImageTwelve,
+    carouselImageFour,
+    bannerImageOne,
+    bannerImageTwo,
+    bannerImageThree,
+    bannerImageFour,
+    bannerImageFive,
+    imageFour,
+    imageFive
 ];
 
   return (
