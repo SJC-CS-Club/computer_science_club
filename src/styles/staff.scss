@@ -16,9 +16,10 @@
       position: relative;
 
       h2 {
-        width: 100%;
+        width: 120%;
         position: absolute;
         top: -1rem;
+        left: -2rem;
         text-align: center;
         font-family: "Playwrite US Modern";
         letter-spacing: 1px;
@@ -44,13 +45,15 @@
         letter-spacing: 0.5px;
         display: block;
         text-decoration: none;
-        font-size: clamp(p.rem(10px), 2vw, p.rem(18px));
+        font-size: 1rem;
         font-weight: bold;
         color: black;
-        word-break: break-all;
+        // word-break: break-all;
+        border: 1px solid red;
       }
       a:hover {
         letter-spacing: 0.04em;
+        text-shadow: 0 0 4px gray;
         transition: all 0.1s ease;
       }
     }
