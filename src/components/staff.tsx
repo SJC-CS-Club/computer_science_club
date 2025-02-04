@@ -1,21 +1,21 @@
 import "../styles/staff.scss";
 import logo from "/assets/images/compsci-logo.png";
 
-let staff = {
-  Nate: {
-    role: "President",
-    email: "example@stu.sanjac.edu",
-    image: "string",
-  },
-  Derrick: {
-    role: "Vice President",
-    email: "example@stu.sanjac.edu",
-  },
-  Sponsor: {
-    role: "Sponsor",
-    email: "eample@stu.sanjac.edu",
-  },
-};
+// let staff = {
+//   Nate: {
+//     role: "President",
+//     email: "example@stu.sanjac.edu",
+//     image: "string",
+//   },
+//   Derrick: {
+//     role: "Vice President",
+//     email: "example@stu.sanjac.edu",
+//   },
+//   Sponsor: {
+//     role: "Sponsor",
+//     email: "eample@stu.sanjac.edu",
+//   },
+// };
 
 export const Staff = () => {
   return (
