@@ -7,12 +7,7 @@ export const Feedback = () => {
         <h1>Feedback</h1>
         <p>
           We'd love to hear about how we can improve our club experience for the
-          students!
-          <span className="feedback-span">
-            (This section is currently under construction and won't work as
-            intended. Or fix it yourself, y'all are developers. Help a club out. - Nate )
-          </span>
-        </p>
+          students!        </p>
       </div>
       <div className="feedback-right">
         <form

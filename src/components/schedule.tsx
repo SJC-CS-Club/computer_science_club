@@ -1,10 +1,10 @@
 import "../styles/schedule.scss";
 
 const ScheduleMaps = [
-  ["Week 1 | (mm/dd/yy)", "The title of what we're learning"],
-  ["Week 2 | (mm/dd/yy)", "These are placeholder text"],
-  ["Week 3 | (mm/dd/yy)", "These are placeholder text"],
-  ["Week 4 | (mm/dd/yy)", "These are placeholder text"],
+  ["Week 1 | (09/24/25)", "First Comp Sci Meeting!"],
+  ["Week 2 | (10/01/25)", "These are placeholder text"],
+  ["Week 3 | (10/08/25)", "These are placeholder text"],
+  ["Week 4 | (10/15/25)", "These are placeholder text"],
 ];
 
 export const Schedule = () => {

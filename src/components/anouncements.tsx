@@ -1,13 +1,10 @@
 import "../styles/anouncements.scss";
 
-
 export const Messages = [
-  "There will be a change of officers for the 2025 Spring Club semester, election's will take place on February 13th, 2025 | 8:33 PM (01/24/25)",
-
-  "This is the new Announcements Section for the new website reform. The build system used is vite, the UI is done with SparkCSS, SASS, TypeScript, and React. The site also uses PostCSS to improve the bundle size of the CSS when sent to the client | 8:19 PM (01/24/25)",
-
-  "lorem dhsakjdhsahdjsahdjsahdsjahj"
-]
+  "The first official meeting will take place on Wednesday, September 24, from 3:00 p.m. to 4:30 p.m. in Building 2, Room 207.",
+  "This website is created and maintained by the SJC Computer Science community. Special thanks to Derrick, Nate, Natalie, Jorge, Emmanuel, Prof. Schneider and Prof. White for their valuable contributions.",
+  "This website is open source. If you’d like to contribute, clone the repository from our GitHub, create a new branch for your feature, and submit a pull request.",
+];
 
 export const Announce = () => {
   return (
@@ -24,7 +21,11 @@ export const Announce = () => {
       <div className="info-right">
         <div className="info-box">
           {Messages.map((element, index) => {
-            return(<h3 className="info-item" key={index}>{element}</h3>)
+            return (
+              <h3 className="info-item" key={index}>
+                {element}
+              </h3>
+            );
           })}
         </div>
       </div>
