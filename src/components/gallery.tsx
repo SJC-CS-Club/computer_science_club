@@ -131,19 +131,19 @@ const Gallery: React.FC = () => {
     imageFive
   ];
   const captions = [
-    "Hackathon 2023 Winners!",
-    "Spring Coding Bootcamp",
-    "Guest Speaker: Jane Doe",
+    "Workship: Git & GitHub",
+    "Intro to Python Development",
+    "Game Development",
     "Team Project Night",
-    "Alumni Meetup",
+    "Game Development",
+    "SJC Coding Comp winners 2024",
     "Workshop: Web Dev Basics",
-    "Banner: Welcome to the Club!",
-    "Banner: Join Us!",
-    "Banner: Club Activities",
-    "Banner: Coding Together",
-    "Banner: Community Events",
-    "Week 4: Robotics Demo",
-    "Week 4: Game Night"
+    "Workshop: Game Development",
+    "Community Driven",
+    "Coding Together",
+    "Workshop: Game Development",
+    "workshop: Cybersecurity",
+    "Community Driven"
   ];
 
   return (
