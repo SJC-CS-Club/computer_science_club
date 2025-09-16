@@ -92,7 +92,7 @@ nav:is(#staff, #contact, #schedule, #about) {
   max-width: 320px;
   height: 100vh;
   background: #222;
-  color: #fff;
+  color: snow;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -100,22 +100,25 @@ nav:is(#staff, #contact, #schedule, #about) {
   box-shadow: -2px 0 8px rgba(0,0,0,0.2);
   z-index: 1003;
   transition: right 0.3s cubic-bezier(0.4,0,0.2,1);
-  border: 1px solid red;
 }
 .mobile-menu.open {
   right: 0;
 }
+
+span {
+  color: snow !important;
+}
+
 .mobile-menu a {
-  color: #fff;
+  color: snow;
   font-size: 2rem !important;
-  margin: 1.2rem 1rem;
+  margin: 1rem 0.5rem !important;
   display: flex;
   align-items: center;
   justify-content: start;
   gap: 1rem;
   text-decoration: none;
   transition: color 0.2s;
-  border: 1px solid red;
 }
 .mobile-menu a:hover {
   color: #ffbf60;
