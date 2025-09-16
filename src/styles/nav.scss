@@ -63,3 +63,97 @@ nav:is(#staff, #contact, #schedule, #about) {
     align-items: center;
   }
 }
+
+/* Hamburger styles */
+.hamburger {
+  background: none;
+  border: none;
+  font-size: 2.5rem;
+  color: gray;
+  cursor: pointer;
+  z-index: 1002;
+  display: flex;
+  align-items: center;
+}
+
+/* Hide hamburger on desktop */
+@media screen and (min-width: 481px) {
+  .hamburger {
+    display: none;
+  }
+}
+
+/* Mobile menu styles */
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  right: -100vw;
+  width: 80vw;
+  max-width: 320px;
+  height: 100vh;
+  background: #222;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 2rem 1.5rem 1.5rem 1.5rem;
+  box-shadow: -2px 0 8px rgba(0,0,0,0.2);
+  z-index: 1003;
+  transition: right 0.3s cubic-bezier(0.4,0,0.2,1);
+}
+.mobile-menu.open {
+  right: 0;
+}
+.mobile-menu a {
+  color: #fff;
+  font-size: 1.3rem;
+  margin: 1.2rem 0;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  text-decoration: none;
+  width: 100%;
+  transition: color 0.2s;
+}
+.mobile-menu a:hover {
+  color: #ffbf60;
+}
+.close-btn {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 2rem;
+  align-self: flex-end;
+  margin-bottom: 1.5rem;
+  cursor: pointer;
+}
+
+/* Backdrop for mobile menu */
+.mobile-menu-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0,0,0,0.4);
+  z-index: 1001;
+}
+
+/* Hide desktop nav on mobile */
+@media screen and (max-width: 480px) {
+  .desktop-nav {
+    display: none;
+  }
+  .mobile-nav {
+    width: 100%;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    position: absolute;
+    z-index: 1000;
+    margin: 0 auto;
+    background: transparent;
+    padding: 0 1.5rem;
+  }
+}

@@ -1,4 +1,4 @@
-import { Nav } from "./components/nav";
+import { ResponsiveNav } from "./components/nav";
 import { Home } from "./pages/home";
 import { Stats } from "./components/stats";
 import { Announce } from "./components/anouncements";
@@ -12,7 +12,7 @@ import Gallery from "./components/gallery";
 function App() {
   return (
     <>
-      <Nav />
+      <ResponsiveNav />
       <Home />
       <Stats />
       <Gallery />

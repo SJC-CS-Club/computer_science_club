@@ -15,74 +15,98 @@ import bannerImageFive from "/assets/images/banner-image-five.jpg";
 import imageFour from "/assets/images/week-4-one.jpg";
 import imageFive from "/assets/images/week-4-two.jpg";
 
-
-
-
 interface CarouselProps {
-  images: string[]; // Array of strings for image URLs
-  autoSlide?: boolean; // Optional: Default is true
-  slideInterval?: number; // Optional: Default is 3000ms
+  images: string[];
+  captions?: string[];
+  autoSlide?: boolean;
+  slideInterval?: number;
 }
 
 export const Carousel: React.FC<CarouselProps> = ({
   images,
+  captions = [],
   autoSlide = false,
   slideInterval = 3000,
 }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [transitioning, setTransitioning] = useState(false);
 
   // Handle Next Button
   const nextImage = () => {
-    setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
+    setTransitioning(true);
+    setTimeout(() => {
+      setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
+      setTransitioning(false);
+    }, 350);
   };
 
   // Handle Previous Button
   const prevImage = () => {
-    setCurrentIndex((prevIndex) =>
-      prevIndex === 0 ? images.length - 1 : prevIndex - 1
-    );
+    setTransitioning(true);
+    setTimeout(() => {
+      setCurrentIndex((prevIndex) =>
+        prevIndex === 0 ? images.length - 1 : prevIndex - 1
+      );
+      setTransitioning(false);
+    }, 350);
   };
 
   // Auto-slide Logic
   useEffect(() => {
     if (autoSlide) {
       const interval = setInterval(nextImage, slideInterval);
-      return () => clearInterval(interval); // Cleanup on component unmount
+      return () => clearInterval(interval);
     }
   }, [autoSlide, slideInterval]);
 
   return (
     <div className="carousel">
-      <button className="carousel-button prev" onClick={prevImage}>
+      <button
+        className="carousel-button prev"
+        onClick={prevImage}
+        aria-label="Previous image"
+      >
         <i className="bx bx-chevron-left"></i>
       </button>
       <div className="carousel-track-wrapper">
-        <div
-          className="carousel-track"
-          style={{
-            transform: `translateX(-${currentIndex * 100}%)`,
-          }}
-        >
+        <div className="carousel-track">
           {images.map((image, index) => (
-            <figure key={index} className="carousel-image-wrapper">
+            <figure
+              key={index}
+              className={`carousel-image-wrapper${index === currentIndex ? " active" : ""}${transitioning ? " transitioning" : ""}`}
+              style={{ display: index === currentIndex ? "flex" : "none" }}
+            >
+              <div className="carousel-image-overlay"></div>
               <img
                 src={image}
-                alt={`Slide ${index}`}
+                alt={captions[index] || `Slide ${index}`}
                 className="carousel-image"
+                draggable={false}
               />
+              {captions[index] && (
+                <figcaption className="carousel-caption">{captions[index]}</figcaption>
+              )}
             </figure>
           ))}
         </div>
       </div>
-      <button className="carousel-button next" onClick={nextImage}>
+      <button
+        className="carousel-button next"
+        onClick={nextImage}
+        aria-label="Next image"
+      >
         <i className="bx bx-chevron-right"></i>
       </button>
       <div className="carousel-dots">
         {images.map((_, index) => (
           <span
             key={index}
-            className={`dot ${index === currentIndex ? "active" : ""}`}
+            className={`dot${index === currentIndex ? " active" : ""}`}
             onClick={() => setCurrentIndex(index)}
+            aria-label={`Go to slide ${index + 1}`}
+            tabIndex={0}
+            role="button"
+            onKeyDown={e => { if (e.key === "Enter" || e.key === " ") setCurrentIndex(index); }}
           ></span>
         ))}
       </div>
@@ -105,13 +129,28 @@ const Gallery: React.FC = () => {
     bannerImageFive,
     imageFour,
     imageFive
-];
+  ];
+  const captions = [
+    "Hackathon 2023 Winners!",
+    "Spring Coding Bootcamp",
+    "Guest Speaker: Jane Doe",
+    "Team Project Night",
+    "Alumni Meetup",
+    "Workshop: Web Dev Basics",
+    "Banner: Welcome to the Club!",
+    "Banner: Join Us!",
+    "Banner: Club Activities",
+    "Banner: Coding Together",
+    "Banner: Community Events",
+    "Week 4: Robotics Demo",
+    "Week 4: Game Night"
+  ];
 
   return (
     <section id="gallery-page">
       <h1>Gallery</h1>
       <p>Check out media from the club!</p>
-      <Carousel images={images}></Carousel>
+      <Carousel images={images} captions={captions} autoSlide={true} slideInterval={4000} />
     </section>
   );
 };
