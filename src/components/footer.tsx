@@ -60,9 +60,9 @@ export const FooterDetails = () => {
   return (
     <div className="footer-section" id="footer-card-one">
       <h3>Meeting Times & Directions</h3>
-      <div>Thursday's | 4:00 - 6:00 pm</div>
+      <div>Wednesday's | 3:00 - 5:00 pm</div>
       <div>Building 2 (STEM Building) Room 207</div>
-      <div>Duration: 02/04/25 - 05/01/25</div>
+      <div>Duration: 09/16/25 - 12/03/25</div>
     </div>
   );
 };
