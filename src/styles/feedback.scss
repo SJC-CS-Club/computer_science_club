@@ -10,7 +10,7 @@
     justify-content: center;
     align-items: flex-start;
     flex-direction: column;
-    gap: 10px;
+    gap: 0.75rem;
     padding: 2.5rem 1rem;
 
     :is(h1, p) {
@@ -20,14 +20,13 @@
       font-size: 3rem;
     }
     p {
-      font-size: clamp(1rem, 2vw, 1.5rem);
+      font-size: 1.5rem;
       width: 80%;
     }
   }
 
   .feedback-right {
     width: 50%;
-    border: 1px solid red;
 
     form {
       height: 100%;
@@ -36,20 +35,20 @@
       align-items: center;
       justify-content: center;
 
-      #feedback {
-        height: 90%;
+      .feedback {
+        height: 100%;
         width: 70%;
         margin-top: 1.25rem;
         padding: 0.75rem;
         border: 1px solid black;
-        border-radius: 5px;
+        border-radius: 0.5rem;
         font-size: 1rem;
       }
 
-      input[type="submit"] {
+      .form-submit {
         margin-bottom: 1.25rem;
-        width: p.rem(200px);
         height: 50px;
+        padding: 1rem 1.5rem;
         border-radius: 0.5rem;
         border: none;
         font-weight: bold;

@@ -15,6 +15,7 @@ export const Feedback = () => {
         <form action="https://formspree.io/f/mqayapab" method="POST">
           <textarea
             id="message"
+            className="feedback"
             name="message"
             rows={4}
             cols={50}
@@ -24,7 +25,7 @@ export const Feedback = () => {
           <br />
           <br />
 
-          <button type="submit">Send Feedback</button>
+          <button type="submit" className="form-submit">Send Feedback</button>
         </form>
       </div>
     </section>
