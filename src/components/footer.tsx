@@ -2,13 +2,13 @@ import "../styles/footer.scss";
 
 export const FooterNewsletter = () => {
   return (
-    <div className="footer-section" id="footer-card-three">
+    <div className="footer-section footer-newsletter">
       <h3>Newsletter</h3>
       <p>
         Sign up for our newsletter to stay updated on the latest news and
         events.
       </p>
-      <form action="https://formspree.io/f/xovqayrr" method="POST">
+      <form action="https://formspree.io/f/mqayapab" method="POST">
         <input
           type="email"
           placeholder="Your email address"
@@ -58,7 +58,7 @@ export const FooterSocials = () => {
 
 export const FooterDetails = () => {
   return (
-    <div className="footer-section" id="footer-card-one">
+    <div className="footer-section footer-details">
       <h3>Meeting Times & Directions</h3>
       <div>Wednesday's | 3:00 - 5:00 pm</div>
       <div>Building 2 (STEM Building) Room 207</div>

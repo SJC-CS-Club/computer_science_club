@@ -21,16 +21,54 @@ footer {
   gap: 5%;
 }
 
+// Footer Details section
+.footer-details {
+
+  h3 {
+    width: 90%;
+    text-align: center;
+    font-size: 2rem;
+  }
+}
+
+// Footer newsletter
+.footer-newsletter {
+
+  h3 {
+    width: 90%;
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  p {
+    font-size: 1.25rem;
+    text-align: center;
+    padding: 0 1rem;
+  }
+
+  form {
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+
+    input {
+      width: 65%;
+      padding: 1rem;
+      border-radius: 0.5rem;
+      border: none;
+    }
+    button {
+      padding: 1rem 1.5rem;
+      border-radius: 0.5rem;
+      border: none; 
+    }
+  }
+}
+
 .footer-section div {
   width: 90%;
   text-align: center;
   font-size: clamp(16px, 2vw, 20px);
-}
-
-.footer-section h3 {
-  width: 90%;
-  text-align: center;
-  font-size: clamp(8px, 2vw, 28px);
 }
 
 #footer-card-two a {
@@ -43,29 +81,6 @@ footer {
 
 #footer-card-three p {
   width: 90%;
-}
-
-#footer-card-three form {
-  width: 90%;
-  height: 15%;
-  display: flex;
-  justify-content: space-between;
-}
-
-#footer-card-three input {
-  height: 100%;
-  width: 65%;
-  padding-left: 5%;
-}
-
-#footer-card-three button {
-  height: 100%;
-  width: 30%;
-}
-
-#footer-card-three p {
-  font-size: clamp(10px, 2vw, 20px);
-  text-align: center;
 }
 
 #footer-card-four a {
@@ -84,10 +99,26 @@ footer {
   padding-top: 10px;
 }
 
-@media screen and (max-width: 1024px) {
-  #footer-card-four a {
-    font-size: clamp(10px, 4vw, 35px);
+@media screen and (max-width: 1200px) {
+  .footer-newsletter {
+    form {
+      flex-direction: column;
+      gap: 0.5rem;
+
+      input {
+        width: 100%;
+      }
+
+      button {
+        // width: 50%;
+        margin: 0 auto;
+      }
+    }
   }
+}
+
+@media screen and (max-width: 1024px) {
+  //
 }
 
 /* Tablet Design */
@@ -117,13 +148,10 @@ footer {
     font-size: clamp(22px, 3vw, 40px);
   }
 
-  #footer-card-two a,
-  #footer-card-three p {
-    font-size: clamp(22px, 2.75vw, 40px);
-  }
-
-  #footer-card-four a {
-    font-size: clamp(30px, 8vw, 40px);
+  .footer-newsletter {
+    p {
+      font-size: 1.5rem;
+    }
   }
 
   #footer-ending {
