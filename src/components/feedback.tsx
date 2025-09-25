@@ -6,27 +6,25 @@ export const Feedback = () => {
       <div className="feedback-left">
         <h1>Feedback</h1>
         <p>
-          We'd love to hear about how we can improve our club experience for the
-          students!        </p>
+          We'd love to hear your thoughts on how we can make the club experience
+          even better! Your feedback will remain anonymous unless you choose to
+          include your name and email.
+        </p>
       </div>
       <div className="feedback-right">
-        <form
-          action="mailto:Paz.n089158@stu.sanjac.edu"
-          method="post"
-          encType="text/plain"
-        >
-          <label htmlFor="feedback"></label>
-          <br />
+        <form action="https://formspree.io/f/mqayapab" method="POST">
           <textarea
-            id="feedback"
-            name="feedback"
+            id="message"
+            name="message"
             rows={4}
             cols={50}
             placeholder="Enter feedback for improvements!"
+            required
           ></textarea>
           <br />
           <br />
-          <input type="submit" value="Send Feedback" />
+
+          <button type="submit">Send Feedback</button>
         </form>
       </div>
     </section>
