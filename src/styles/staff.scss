@@ -75,7 +75,7 @@
       transition: color 0.3s ease;
 
       &:hover {
-        color: #00bcd4;
+        color: white;
       }
     }
   }
@@ -94,187 +94,40 @@
       gap: 3rem;
     }
   }
-
-  // @media (max-width: 768px) {
-  //   .staff-image-container {
-  //     grid-template-columns: 1fr;
-  //   }
-  // }
 }
 
-// .staff-container {
-//   width: 100%;
+// Staff Officer section
 
-//   .staff-image-container {
-//     width: 100%;
-//     padding: 4rem 2rem;
-//     height: 80%;
-//     display: flex;
-//     justify-content: space-around;
-//     align-items: center;
+.officer-section {
+  // border: 1px solid red;
 
-//     .staff {
-//       width: 25%;
-//       position: relative;
+  h1 {
+    // border: 1px solid red;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
 
-//       h2 {
-//         width: 120%;
-//         position: absolute;
-//         top: -1rem;
-//         left: -2rem;
-//         text-align: center;
-//         font-family: "Playwrite US Modern";
-//         letter-spacing: p.rem(1px);
-//         font-weight: 400;
-//         border: 1px solid red;
-//       }
+  .staff-officer-names {
+    // border: 1px solid red;
+    font-size: 1.25rem;
+    padding:  0 1rem;
+  }
 
-//       figure {
-//         width: 100%;
-//         height: auto;
+  .officer-mobile {
+    display: none;
+  }
+}
 
-//         img {
-//           object-fit: contain;
-//           width: 100%;
-//           height: 100%;
-//         }
-//       }
-
-//       a {
-//         width: 100%;
-//         position: absolute;
-//         bottom: -1.5rem;
-//         text-align: center;
-//         letter-spacing: 0.5px;
-//         display: block;
-//         text-decoration: none;
-//         font-size: 1rem;
-//         font-weight: bold;
-//         color: black;
-//         margin-bottom: 1rem;
-//         // word-break: break-all;
-//         border: 1px solid red;
-//       }
-//       a:hover {
-//         letter-spacing: 0.04em;
-//         text-shadow: 0 0 4px gray;
-//         transition: all 0.1s ease;
-//       }
-//     }
-//   }
-// }
-
-// .president {
-//   transform: scale(1.1);
-// }
-
-// .officer {
-//   transform: scale(0.9);
-// }
-
-// hr {
-//   width: 60vw;
-//   margin: 0 auto;
-// }
-
-// #vice-pres {
-//   background-image: url("../../public/assets/images/compsci-logo.png");
-//   background-position: center;
-//   background-size: cover;
-//   position: relative;
-//   box-shadow: 0 8px 8px gray;
-// }
-
-// // Officer Section
-// .officer-section {
-//   height: 15vh;
-//   position: relative;
-//   display: flex;
-//   justify-content: space-around;
-//   align-items: center;
-//   flex-direction: column;
-//   gap: 15px;
-// }
-
-// .see-more {
-//   position: absolute;
-//   top: 5%;
-//   right: 5%;
-//   font-weight: bold;
-//   display: flex;
-//   justify-content: space-around;
-//   align-items: center;
-//   width: 100px;
-//   height: 20px;
-//   font-size: 16px;
-//   cursor: pointer;
-//   text-decoration: none;
-//   color: black;
-// }
-
-// .see-more:hover {
-//   text-shadow: 0 0 4px gray;
-//   letter-spacing: 0.04em;
-//   transition: all 0.1s ease;
-// }
-
-// /* For mobile use */
-// .officer-mobile {
-//   display: none;
-// }
-
-// #staff-officer-title {
-//   text-align: center;
-//   font-size: 28px;
-//   margin-top: 15px;
-// }
-
-// #staff-officer-names {
-//   text-align: center;
-//   margin-bottom: 40px;
-// }
-
-// @media screen and (max-width: 1024px) {
-//   .staff-container {
-//     border: 1px solid red;
-
-//     .staff-image-container {
-//       border: 2px solid blue;
-//       flex-direction: column;
-//       gap: 4rem;
-//     }
-//   }
-// }
-
-// @media screen and (max-width: p.rem(768px)) {
-//   #staff-container {
-//     .staff-image-container {
-//       flex-direction: column;
-//       gap: 2rem;
-
-//       .staff {
-//         margin: 3rem;
-//         width: 65%;
-//       }
-//     }
-
-//     .officer-section {
-//       display: flex;
-//       height: auto;
-//       padding-bottom: 1rem;
-
-//       #staff-officer-names {
-//         display: none;
-//       }
-//     }
-//     #staff-officer-title {
-//       font-size: 3.5rem;
-//     }
-
-//     .officer-mobile {
-//       display: flex;
-//       padding: 0.5rem;
-//       font-size: 1.75rem;
-//     }
-//   }
-// }
+@media screen and (max-width: 768px) {
+  .officer-section {
+    .staff-officer-names {
+      display: none;
+    }
+    .officer-mobile {
+      display: flex;
+      font-size: 1rem;
+      width: 80vw;
+      justify-content: space-between;
+    }
+  }
+}

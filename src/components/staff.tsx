@@ -36,21 +36,36 @@ export const Staff = () => {
 export const StaffOfficers = () => {
   return (
     <div className="officer-section">
-      <a href="./src/staff/see_more.html" className="see-more" target="_self">
-        See More<i className="bx bxs-chevron-right"></i>
-      </a>
       <h1 id="staff-officer-title">Officers</h1>
-      <h3 id="staff-officer-names">
-        Vacant · President | Vacant · Vice President | Vacant · SGA | Vacant ·
-        Secretary | Vacant · Treasurer | Vacant · Social
+      <h3 className="staff-officer-names">
+        President · Vacant | Vice President · Vacant | SGA · Vacant | Secretary ·
+        Vacant | Treasurer · Vacant | Social · Vacant
       </h3>
 
-      <h3 className="officer-mobile"> President · Vacant</h3>
-      <h3 className="officer-mobile"> Vice President · Vacant</h3>
-      <h3 className="officer-mobile"> SGA · Vacant</h3>
-      <h3 className="officer-mobile"> Treasurer · Vacant</h3>
-      <h3 className="officer-mobile"> Social · Vacant</h3>
-      <h3 className="officer-mobile"> Secretary · Vacant</h3>
+      <div className="officer-mobile">
+        <h3 className="left">President</h3>
+        <h3 className="right">Vacant</h3>
+      </div>
+      <div className="officer-mobile">
+        <h3 className="left">Vice President</h3>
+        <h3 className="right">Vacant</h3>
+      </div>
+      <div className="officer-mobile">
+        <h3 className="left">Secretary</h3>
+        <h3 className="right">Vacant</h3>
+      </div>
+      <div className="officer-mobile">
+        <h3 className="left">Treasurer</h3>
+        <h3 className="right">Vacant</h3>
+      </div>
+      <div className="officer-mobile">
+        <h3 className="left">SGA</h3>
+        <h3 className="right">Vacant</h3>
+      </div>
+      <div className="officer-mobile">
+        <h3 className="left">Social</h3>
+        <h3 className="right">Vacant</h3>
+      </div>
     </div>
   );
 };
