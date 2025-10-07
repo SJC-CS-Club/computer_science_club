@@ -1,7 +1,6 @@
 @use "./plug" as p;
 
 #fall-schedule {
-  // height: 60vh;
   width: 100%;
   display: flex;
   background-color: lightgray;
@@ -67,19 +66,19 @@
 }
 
 /* Popup Section for the button */
-.popup {
-  display: none;
-  position: fixed;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
-  z-index: 1000;
-}
+// .popup {
+//   display: none;
+//   // position: fixed;
+//   left: 0;
+//   top: 0;
+//   width: 100%;
+//   height: 100%;
+//   background-color: rgba(0, 0, 0, 0.5);
+//   z-index: 1000;
+// }
 
 .popup-content {
-  position: relative;
+  // position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -94,14 +93,14 @@
 }
 
 .popup-content p {
-  display: block;
+  // display: block;
   text-align: left;
   width: 95%;
   height: 90%;
 }
 
 .close-button {
-  position: absolute;
+  // position: absolute;
   top: 5%;
   right: 2%;
   font-size: 30px;
@@ -149,5 +148,171 @@
   .popup-content {
     width: 80vw;
     font-size: clamp(12px, 3vw, 24px);
+  }
+}
+
+
+/* Toggle visibility via a modifier class */
+.popup--open {
+  display: block;
+}
+
+/* Smooth fade for backdrop */
+.popup {
+  opacity: 0;
+  transition: opacity 180ms ease-in-out;
+  border: 1px solid red;
+
+  &.popup--open {
+    opacity: 1;
+  }
+}
+
+/* ============================= */
+/* True Overlay Modal Styling    */
+/* ============================= */
+
+/* Backdrop that covers the entire screen */
+.modal-backdrop {
+  position: fixed;
+  inset: 0; 
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999; 
+  opacity: 1;
+  pointer-events: none;
+  transition: opacity 0.25s ease-in-out;
+  border: 1px solid red;
+
+  /* When modal is open */
+  &.open,
+  &[data-open="true"] {
+    opacity: 1;
+    pointer-events: auto;
+  }
+}
+
+/* Modal dialog box centered on screen */
+.modal-dialog {
+  background: #ffffff;
+  color: #111;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 600px;
+  padding: 2rem;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+  position: relative;
+  text-align: left;
+  animation: fadeInUp 0.3s ease-out;
+
+  /* Headings & content */
+  .modal-title {
+    font-size: 1.5rem;
+    margin-bottom: 0.75rem;
+    color: #000;
+  }
+
+  .modal-body {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #333;
+  }
+}
+
+/* Close Button (X) */
+.modal-close {
+  position: absolute;
+  top: 12px;
+  right: 14px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  border: none;
+  background: transparent;
+  color: #444;
+  cursor: pointer;
+  transition: color 0.2s ease, transform 0.2s ease;
+
+  &:hover {
+    color: #000;
+    transform: scale(1.1);
+  }
+}
+
+/* Entry animation */
+@keyframes fadeInUp {
+  from {
+    transform: translateY(20px);
+    opacity: 0.8;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* ============================= */
+/* Responsive Modal Adjustments  */
+/* ============================= */
+@media screen and (max-width: 768px) {
+  .modal-dialog {
+    width: 85%;
+    padding: 1.5rem;
+    font-size: clamp(14px, 3vw, 18px);
+  }
+}
+
+/* Animate dialog in, support long content */
+.popup-content {
+  max-height: 70vh;
+  overflow: auto;
+  outline: none; // focus is managed via JS
+  animation: popup-in 180ms ease-out;
+    border: 1px solid red;
+
+
+  /* optional: nicer text rhythm inside modal */
+  p + p {
+    margin-top: 0.75rem;
+  }
+}
+
+@keyframes popup-in {
+  from {
+    transform: translateY(6px);
+    opacity: 0.85;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Focus ring for keyboard accessibility (close button) */
+.close-button:focus-visible {
+  outline: 3px solid rgba(25, 118, 210, 0.7);
+  outline-offset: 2px;
+}
+
+/* Optional: make week buttons feel interactive without changing your layout */
+#fall-schedule .fs-scroll-wheel .fall-info-buttons {
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  background: white;
+  transition: transform 120ms ease, box-shadow 120ms ease,
+    border-color 120ms ease;
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+    border-color: rgba(0, 0, 0, 0.25);
+  }
+}
+
+/* Responsive tweak for modal on small screens (extends your tablet rules) */
+@media screen and (max-width: p.rem(480px)) {
+  .popup-content {
+    width: 90vw;
+    margin: 20% auto;
   }
 }
