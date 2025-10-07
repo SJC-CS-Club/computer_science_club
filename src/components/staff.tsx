@@ -3,25 +3,25 @@ import logo from "/assets/images/compsci-logo.png";
 
 export const Staff = () => {
   return (
-    <section id="staff-container">
+    <section className="staff-container">
       <div className="staff-image-container">
         <div className="staff">
           <h2>VICE PRESIDENT</h2>
-          <figure id="vice-pres">
+          <figure id="officers" className="vice-pres officer">
             <img src={logo} alt="" />
           </figure>
           <a href="#">example@stu.sanjac.edu</a>
         </div>
-        <div className="staff president">
+        <div className="staff president" id="pres">
           <h2>PRESIDENT</h2>
-          <figure id="vice-pres">
+          <figure id="officers" className="officer">
             <img src={logo} alt="" />
           </figure>
           <a href="#">example@stu.sanjac.edu</a>
         </div>
-        <div className="staff">
+        <div className="staff sponsor">
           <h2>SPONSOR</h2>
-          <figure id="vice-pres">
+          <figure id="officers" className="officer">
             <img src={logo} alt="" />
           </figure>
           <a href="#">example@stu.sanjac.edu</a>
