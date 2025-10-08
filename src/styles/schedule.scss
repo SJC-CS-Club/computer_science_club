@@ -79,7 +79,6 @@
   opacity: 1;
   pointer-events: none;
   transition: opacity 0.25s ease-in-out;
-  border: 1px solid red;
   pointer-events: auto;
 
   /* When modal is open */
@@ -120,7 +119,7 @@
     font-size: 1.25rem;
     line-height: 1.6;
     color: black;
-    overflow-y: scroll;
+    overflow-y: auto;
     overflow-x: hidden;
     -webkit-overflow-scrolling: touch; 
     padding-right: 0.5rem;
