@@ -1,16 +1,11 @@
-import { useEffect, useState, useRef } from "react";
-
-const ScheduleMaps: [string, string][] = [
-  ["Week 1 | (09/24/25)", "First Comp Sci Meeting!"],
-  ["Week 2 | (10/01/25)", "These are placeholder text"],
-  ["Week 3 | (10/08/25)", "These are placeholder text"],
-  ["Week 4 | (10/15/25)", "These are placeholder text"],
-];
+import { useEffect, useState, useRef, ReactNode } from "react";
+import { ScheduleMaps } from "../data/dates";
+import "../styles/schedule.scss";
 
 type ModalProps = {
   open: boolean;
   title?: string;
-  body?: string;
+  body?: ReactNode;
   onClose: () => void;
 };
 
@@ -41,7 +36,6 @@ function Modal({ open, title, body, onClose }: ModalProps) {
       className="modal-backdrop"
       role="presentation"
       onClick={(e) => {
-        // Close only if backdrop (outside the dialog) was clicked
         if (e.target === e.currentTarget) onClose();
       }}
     >
@@ -67,7 +61,10 @@ function Modal({ open, title, body, onClose }: ModalProps) {
             {title}
           </h2>
         )}
-        <div id="modal-body" className="modal-body">
+        <div
+          id="modal-body"
+          className="modal-body"
+        >
           {body}
         </div>
       </div>
@@ -97,7 +94,7 @@ export const Schedule = () => {
         </div>
 
         <div className="fs-scroll-wheel">
-          {ScheduleMaps.map(([label, details], index) => (
+          {ScheduleMaps.map(({title, subtitle}, index) => (
             <button
               className="fall-info-buttons"
               key={index}
@@ -106,9 +103,9 @@ export const Schedule = () => {
               aria-controls="week-modal"
               onClick={() => setOpenIndex(index)}
             >
-              {label}
+              {title}
               <br />
-              {details}
+              {subtitle}
             </button>
           ))}
         </div>
@@ -116,8 +113,8 @@ export const Schedule = () => {
 
       <Modal
         open={isOpen}
-        title={current?.[0]}
-        body={current?.[1]}
+        title={current?.title}
+        body={current?.content}
         onClose={() => setOpenIndex(null)}
       />
     </section>
