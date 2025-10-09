@@ -1,5 +1,10 @@
 import "../styles/staff.scss";
 import logo from "/assets/images/compsci-logo.png";
+import nate from "/assets/images/president-two.jpg";
+import sponsor from "/assets/images/staff-image-six.jpg";
+import vp from "/assets/images/vp.jpg";
+import sga from "/assets/images/sga.jpg";
+import tres from "/assets/images/tres.jpg";
 
 interface OfficerProps {
   officerName: string;
@@ -14,7 +19,7 @@ const Officers: OfficerProps[] = [
   {
     officerName: "Nathaniel Paz",
     title: "PRESIDENT",
-    image: logo,
+    image: nate,
     alt: "a picture of the president",
     email: "Paz.n089158@stu.sanjac.edu",
     id: "president",
@@ -22,7 +27,7 @@ const Officers: OfficerProps[] = [
   {
     officerName: "Nick Hinojosa",
     title: "VICE PRESIDENT",
-    image: logo,
+    image: vp,
     alt: "a picture of the vice president",
     email: "Hinojosa.N204794@stu.sanjac.edu",
     id: "vp",
@@ -30,7 +35,7 @@ const Officers: OfficerProps[] = [
   {
     officerName: "Emilye Hollins",
     title: "SGA",
-    image: logo,
+    image: sga,
     alt: "a picture of the sga representative",
     email: "hollins.e949016@stu.sanjac.edu",
     id: "sga",
@@ -46,7 +51,7 @@ const Officers: OfficerProps[] = [
   {
     officerName: "John Lowe",
     title: "Treasurer",
-    image: logo,
+    image: tres,
     alt: "a picture of the social chair",
     email: "Lowe.j918880@stu.sanjac.edu",
     id: "tres",
@@ -62,7 +67,7 @@ const Officers: OfficerProps[] = [
   {
     officerName: "Professor Schneider",
     title: "sponsor",
-    image: logo,
+    image: sponsor,
     alt: "a picture of the sponsor",
     email: "Steven.Schneider@sjcd.edu",
     id: "sponsor",
