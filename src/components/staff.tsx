@@ -43,6 +43,30 @@ const Officers: OfficerProps[] = [
     email: "brown.a147159@stu.sanjac.edu",
     id: "social",
   },
+  {
+    officerName: "John Lowe",
+    title: "Treasurer",
+    image: logo,
+    alt: "a picture of the social chair",
+    email: "Lowe.j918880@stu.sanjac.edu",
+    id: "tres",
+  },
+  {
+    officerName: "Mehrab Azan",
+    title: "SECRETARY",
+    image: logo,
+    alt: "a picture of the secretary",
+    email: "azan.m126151@stu.sanjac.edu",
+    id: "sec",
+  },
+  {
+    officerName: "Professor Schneider",
+    title: "sponsor",
+    image: logo,
+    alt: "a picture of the sponsor",
+    email: "Steven.Schneider@sjcd.edu",
+    id: "sponsor",
+  },
 ];
 
 export const Staff = () => {
@@ -52,7 +76,7 @@ export const Staff = () => {
         {Officers.map((elem) => (
           <div className="staff" id={elem.id} key={elem.id}>
             <h2>{elem.title}</h2>
-            <figure className="officer" id="officer">
+            <figure className="officer">
               <img src={elem.image} alt={elem.alt} />
             </figure>
             <a href={`mailto:${elem.email}`}>{elem.email}</a>
@@ -70,33 +94,33 @@ export const StaffOfficers = () => {
     <div className="officer-section">
       <h1 id="staff-officer-title">Officers</h1>
       <h3 className="staff-officer-names">
-        President · Vacant | Vice President · Vacant | SGA · Vacant | Secretary
-        · Vacant | Treasurer · Vacant | Social · Vacant
+        President · Nathaniel Paz | Vice President · Nick Hinojosa | SGA · Emilye Hollins | Secretary
+        · Mehrab Azan | Treasurer · John Lowe | Social · Andrew Brown
       </h3>
 
       <div className="officer-mobile">
         <h3 className="left">President</h3>
-        <h3 className="right">Vacant</h3>
+        <h3 className="right">Nathaniel Paz</h3>
       </div>
       <div className="officer-mobile">
         <h3 className="left">Vice President</h3>
-        <h3 className="right">Vacant</h3>
+        <h3 className="right">Nick Hinojosa</h3>
       </div>
       <div className="officer-mobile">
         <h3 className="left">Secretary</h3>
-        <h3 className="right">Vacant</h3>
+        <h3 className="right">Mehrab Azan</h3>
       </div>
       <div className="officer-mobile">
         <h3 className="left">Treasurer</h3>
-        <h3 className="right">Vacant</h3>
+        <h3 className="right">John Lowe</h3>
       </div>
       <div className="officer-mobile">
         <h3 className="left">SGA</h3>
-        <h3 className="right">Vacant</h3>
+        <h3 className="right">Emilye Hollins</h3>
       </div>
       <div className="officer-mobile">
         <h3 className="left">Social</h3>
-        <h3 className="right">Vacant</h3>
+        <h3 className="right">Andrew Brown</h3>
       </div>
     </div>
   );

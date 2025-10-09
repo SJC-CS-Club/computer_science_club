@@ -24,7 +24,6 @@
     max-width: 1600px;
     justify-items: center;
     margin-top: 2rem;
-    // border: 1px solid red;    
   }
 
   .staff {
@@ -36,6 +35,7 @@
     border-radius: 1rem;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    flex-grow: 1;
 
     &:hover {
       transform: translateY(-4px);
@@ -90,7 +90,6 @@
   }
 }
 
-// Staff Officer section
 
 .officer-section {
   // border: 1px solid red;
