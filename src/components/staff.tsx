@@ -5,6 +5,8 @@ import sponsor from "/assets/images/staff-image-six.jpg";
 import vp from "/assets/images/vp.jpg";
 import sga from "/assets/images/sga.jpg";
 import tres from "/assets/images/tres.jpg";
+import social from "/assets/images/drew.jpg";
+import sec from "/assets/images/mehrab.jpg";
 
 interface OfficerProps {
   officerName: string;
@@ -43,7 +45,7 @@ const Officers: OfficerProps[] = [
   {
     officerName: "Andrew Brown",
     title: "Social Chair",
-    image: logo,
+    image: social,
     alt: "a picture of the social chair",
     email: "brown.a147159@stu.sanjac.edu",
     id: "social",
@@ -59,7 +61,7 @@ const Officers: OfficerProps[] = [
   {
     officerName: "Mehrab Azan",
     title: "SECRETARY",
-    image: logo,
+    image: sec,
     alt: "a picture of the secretary",
     email: "azan.m126151@stu.sanjac.edu",
     id: "sec",
