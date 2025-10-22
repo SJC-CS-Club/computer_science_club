@@ -1,5 +1,4 @@
 import "../styles/staff.scss";
-import logo from "/assets/images/compsci-logo.png";
 import nate from "/assets/images/president-two.jpg";
 import sponsor from "/assets/images/staff-image-six.jpg";
 import vp from "/assets/images/vp.jpg";
